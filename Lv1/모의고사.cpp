@@ -5,6 +5,7 @@
 #include <algorithm>
 using namespace std;
 
+//최대 사용자가 여러명일 때는, stack을 이용하는게 편하다.
 vector<int> solution(vector<int> answers) {
     vector<int> answer;
     
