@@ -12,6 +12,7 @@
 |모의고사|[모의고사 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42840)|[모의고사 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC.cpp)| 
 |폰켓몬|[폰켓몬 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/1845)|[폰켓몬 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%ED%8F%B0%EC%BC%93%EB%AA%AC.cpp)| 
 |소수 만들기|[소수 만들기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12977)|[소수 만들기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EC%86%8C%EC%88%98%20%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp)| 
+|로또의 최고 순위와 최저 순위|[로또의 최고 순위와 최저 순위 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/77484)|[로또의 최고 순위와 최저 순위 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EB%A1%9C%EB%98%90%EC%9D%98%20%EC%B5%9C%EA%B3%A0%20%EC%88%9C%EC%9C%84%EC%99%80%20%EC%B5%9C%EC%A0%80%20%EC%88%9C%EC%9C%84.cpp)| 
 ### [Lv 2]
 |문제|링크|코드| 
 |:---|:---:|---:| 
