@@ -20,4 +20,4 @@
 |문제|링크|코드| 
 |:---|:---:|---:| 
 |캐시|[캐시 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/17680)|[캐시 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%5B1%EC%B0%A8%5D%20%EC%BA%90%EC%8B%9C.cpp)| 
-|짝지어 제거하기|[짝지어 제거하기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12973)|[짝지어 제거하기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EC%A7%9D%EC%A7%80%EC%96%B4%20%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0.cpp)| 
+|짝지어 제거하기|[짝지어 제거하기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12973)|[짝지어 제거하기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%EC%A7%9D%EC%A7%80%EC%96%B4%20%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0.cpp)| 
