@@ -20,6 +20,7 @@
 |신규 아이디 추천|[신규 아이디 추천 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/72410)|[신규 아이디 추천 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EC%8B%A0%EA%B7%9C%20%EC%95%84%EC%9D%B4%EB%94%94%20%EC%B6%94%EC%B2%9C.cpp)| 
 |K번째 수|[K번째 수 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42748)|[K번째 수 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/K%EB%B2%88%EC%A7%B8%20%EC%88%98.cpp)| 
 |키패드 누르기|[키패드 누르기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/67256)|[키패드 누르기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%ED%82%A4%ED%8C%A8%EB%93%9C%20%EB%88%84%EB%A5%B4%EA%B8%B0.cpp)|
+|예산|[예산 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12982)|[키패드 누르기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EC%98%88%EC%82%B0.cpp)|
 ### [Lv 2]
 |문제|링크|코드| 
 |:---|:---:|---:| 
