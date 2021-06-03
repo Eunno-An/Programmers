@@ -3,6 +3,7 @@
 #include <cmath>
 #include <algorithm>
 using namespace std;
+//2020 카카오 인턴쉽
 //pair로 하면 진짜 쉽게 풀리는 문제를.. 그냥 거리로만 계산하려다가!
 //만약 왼손가락이 4, 오른손가락이 3 일때 5를 누르려면 거리를 계산하다가 이상하게 꼬여버리게 짜버려서..
 
