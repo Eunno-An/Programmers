@@ -28,3 +28,4 @@
 |캐시|[캐시 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/17680)|[캐시 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%5B1%EC%B0%A8%5D%20%EC%BA%90%EC%8B%9C.cpp)| 
 |짝지어 제거하기|[짝지어 제거하기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12973)|[짝지어 제거하기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%EC%A7%9D%EC%A7%80%EC%96%B4%20%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0.cpp)| 
 |단체 사진 찍기|[단체 사진 찍기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/1835)|[단체 사진 찍기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%EB%8B%A8%EC%B2%B4%20%EC%82%AC%EC%A7%84%20%EC%B0%8D%EA%B8%B0.cpp)| 
+|뉴스 클러스터링|[뉴스 클러스터링 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/17677)|[뉴스 클러스터링 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%5B1%EC%B0%A8%5D%EB%89%B4%EC%8A%A4%20%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0%EB%A7%81.cpp)| 
