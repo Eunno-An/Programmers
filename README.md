@@ -23,6 +23,7 @@
 |예산|[예산 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12982)|[키패드 누르기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EC%98%88%EC%82%B0.cpp)|
 |약수의 개수와 덧셈|[약수의 개수와 덧셈 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/77884?language=cpp)|[약수의 개수와 덧셈 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EC%95%BD%EC%88%98%EC%9D%98%20%EA%B0%9C%EC%88%98%EC%99%80%20%EB%8D%A7%EC%85%88.cpp)|
 |3진법 뒤집기|[3진법 뒤집기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/68935)|[3진법 뒤집기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/3%EC%A7%84%EB%B2%95%20%EB%92%A4%EC%A7%91%EA%B8%B0.cpp)|
+|실패율|[실패율 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42889)|[실패율 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EC%8B%A4%ED%8C%A8%EC%9C%A8.cpp)|
 ### [Lv 2]
 |문제|링크|코드| 
 |:---|:---:|---:| 
