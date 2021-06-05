@@ -25,6 +25,7 @@
 |3진법 뒤집기|[3진법 뒤집기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/68935)|[3진법 뒤집기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/3%EC%A7%84%EB%B2%95%20%EB%92%A4%EC%A7%91%EA%B8%B0.cpp)|
 |실패율|[실패율 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42889)|[실패율 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EC%8B%A4%ED%8C%A8%EC%9C%A8.cpp)|
 |두 개 뽑아서 더하기|[두 개 뽑아서 더하기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/68644?language=cpp)|[두 개 뽑아서 더하기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EB%91%90%20%EA%B0%9C%20%EB%BD%91%EC%95%84%EC%84%9C%20%EB%8D%94%ED%95%98%EA%B8%B0.cpp)|
+|가운데 글자 가져오기|[가운데 글자 가져오기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12903)|[가운데 글자 가져오기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EA%B0%80%EC%9A%B4%EB%8D%B0%20%EA%B8%80%EC%9E%90%20%EA%B0%80%EC%A0%B8%EC%98%A4%EA%B8%B0.cpp)|
 ### [Lv 2]
 |문제|링크|코드| 
 |:---|:---:|---:| 
