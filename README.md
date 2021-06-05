@@ -22,6 +22,7 @@
 |키패드 누르기|[키패드 누르기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/67256)|[키패드 누르기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%ED%82%A4%ED%8C%A8%EB%93%9C%20%EB%88%84%EB%A5%B4%EA%B8%B0.cpp)|
 |예산|[예산 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12982)|[키패드 누르기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EC%98%88%EC%82%B0.cpp)|
 |약수의 개수와 덧셈|[약수의 개수와 덧셈 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/77884?language=cpp)|[약수의 개수와 덧셈 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EC%95%BD%EC%88%98%EC%9D%98%20%EA%B0%9C%EC%88%98%EC%99%80%20%EB%8D%A7%EC%85%88.cpp)|
+|3진법 뒤집기|[3진법 뒤집기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/68935)|[3진법 뒤집기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/3%EC%A7%84%EB%B2%95%20%EB%92%A4%EC%A7%91%EA%B8%B0.cpp)|
 ### [Lv 2]
 |문제|링크|코드| 
 |:---|:---:|---:| 
