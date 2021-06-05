@@ -2,9 +2,10 @@
 #include<vector>
 using namespace std;
 
+//3진법으로 변환하는 과정에서 count 변수가 오버플로가 날 수 있음.
 int solution(int n) {
     long long answer = 0;
-    int count = 1;
+    long long count = 1;
     while(n != 0){
         int k = n %3;
         n /= 3;
@@ -24,15 +25,14 @@ int solution(int n) {
         count /= 10;
         numbers.push_back(front_num);
     }
-    for(int i=0; i<numbers.size(); i++){
-        cout << numbers[i] << ' ';
-    }
     answer = 0;
     int third=1;
-    for(int i=0; i<=numbers.size(); i++){
-        answer += numbers[i] *third;
-       // cout << result << '\n';
-        third*=3;
+    for(int i=0; i<numbers.size(); i++){
+        answer += numbers[i] * third;
+        third *= 3;
     }
+   
+    
+    
     return answer;
 }
