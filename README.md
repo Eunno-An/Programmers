@@ -30,6 +30,7 @@
 |같은 숫자는 싫어|[같은 숫자는 싫어 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12906)|[같은 숫자는 싫어 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EA%B0%99%EC%9D%80%20%EC%88%AB%EC%9E%90%EB%8A%94%20%EC%8B%AB%EC%96%B4.cpp)|
 |나누어 떨어지는 숫자 배열|[나누어 떨어지는 숫자 배열 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12910)|[나누어 떨어지는 숫자 배열 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EB%82%98%EB%88%84%EC%96%B4%20%EB%96%A8%EC%96%B4%EC%A7%80%EB%8A%94%20%EC%88%AB%EC%9E%90%20%EB%B0%B0%EC%97%B4.cpp)|
 |두 정수 사이의 합|[두 정수 사이의 합 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12912)|[두 정수 사이의 합 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EB%91%90%20%EC%A0%95%EC%88%98%20%EC%82%AC%EC%9D%B4%EC%9D%98%20%ED%95%A9.cpp)|
+|문자열 내 마음대로 정렬하기|[문자열 내 마음대로 정렬하기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12915)|[문자열 내 마음대로 정렬하기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EB%AC%B8%EC%9E%90%EC%97%B4%20%EB%82%B4%20%EB%A7%88%EC%9D%8C%EB%8C%80%EB%A1%9C%20%EC%A0%95%EB%A0%AC%ED%95%98%EA%B8%B0.cpp)|
 ### [Lv 2]
 |문제|링크|코드| 
 |:---|:---:|---:| 
