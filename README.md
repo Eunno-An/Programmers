@@ -65,3 +65,4 @@
 |뉴스 클러스터링|[뉴스 클러스터링 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/17677)|[뉴스 클러스터링 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%5B1%EC%B0%A8%5D%EB%89%B4%EC%8A%A4%20%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0%EB%A7%81.cpp)| 
 |더 맵게|[더 맵게 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42626)|[더 맵게 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%EB%8D%94%20%EB%A7%B5%EA%B2%8C.cpp)| 
 |오픈채팅방|[오픈채팅방 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42888)|[오픈채팅방 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%EC%98%A4%ED%94%88%EC%B1%84%ED%8C%85%EB%B0%A9.cpp)|
+|타겟 넘버|[타겟 넘버 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/43165)|[타겟 넘버 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%ED%83%80%EA%B2%9F%20%EB%84%98%EB%B2%84.cpp)|
