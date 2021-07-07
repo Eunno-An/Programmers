@@ -2,7 +2,7 @@
 프로그래머스 문제 풀이
 군대에서 코딩하기 챌린지
 
-[못한 날..](https://github.com/Eunno-An/Programmers/blob/main/%EB%AA%BB%ED%95%9C%20%EB%82%A0%EB%93%A4...!)
+[못한 날들에 대한 변명들..?](https://github.com/Eunno-An/Programmers/blob/main/%EB%AA%BB%ED%95%9C%20%EB%82%A0%EB%93%A4...!)
 ### [Lv 1]
 |문제|링크|코드| 
 |:---|:---:|---:| 
