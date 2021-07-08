@@ -31,6 +31,7 @@
 |문자열 내 마음대로 정렬하기|[문자열 내 마음대로 정렬하기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12915)|[문자열 내 마음대로 정렬하기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EB%AC%B8%EC%9E%90%EC%97%B4%20%EB%82%B4%20%EB%A7%88%EC%9D%8C%EB%8C%80%EB%A1%9C%20%EC%A0%95%EB%A0%AC%ED%95%98%EA%B8%B0.cpp)|
 |문자열 내 y와 p의 개수|[문자열 내 y와 p의 개수 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12916)|[문자열 내 y와 p의 개수 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EB%AC%B8%EC%9E%90%EC%97%B4%20%EB%82%B4%20p%EC%99%80%20y%EC%9D%98%20%EA%B0%9C%EC%88%98.cpp)|
 |문자열 내림차순으로 정렬하기|[문자열 내림차순으로 정렬하기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12917)|[문자열 내림차순으로 정렬하기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EB%AC%B8%EC%9E%90%EC%97%B4%20%EB%82%B4%EB%A6%BC%EC%B0%A8%EC%88%9C%EC%9C%BC%EB%A1%9C%20%EB%B0%B0%EC%B9%98%ED%95%98%EA%B8%B0.cpp)|
+|문자열 다루기 기본|[문자열 다루기 기본 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12918?language=cpp)|[문자열 다루기 기본 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EB%AC%B8%EC%9E%90%EC%97%B4%20%EB%8B%A4%EB%A3%A8%EA%B8%B0%20%EA%B8%B0%EB%B3%B8.cpp)|
 ### [Lv 2]
 |문제|링크|코드| 
 |:---|:---:|---:| 
