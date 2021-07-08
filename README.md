@@ -42,3 +42,4 @@
 |오픈채팅방|[오픈채팅방 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42888)|[오픈채팅방 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%EC%98%A4%ED%94%88%EC%B1%84%ED%8C%85%EB%B0%A9.cpp)|
 |타겟 넘버|[타겟 넘버 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/43165)|[타겟 넘버 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%ED%83%80%EA%B2%9F%20%EB%84%98%EB%B2%84.cpp)|
 |멀쩡한 사각형|[멀쩡한 사각형 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/62048)|[타겟 넘버 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%ED%83%80%EA%B2%9F%20%EB%84%98%EB%B2%84.cpp)|
+|문자열 압축|[문자열 압축 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/60057)|[문자열 압축 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%EB%AC%B8%EC%9E%90%EC%97%B4%20%EC%95%95%EC%B6%95.cpp)|
