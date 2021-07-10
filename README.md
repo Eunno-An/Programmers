@@ -36,8 +36,8 @@
 |소수 찾기|[소수 찾기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12921)|[소수 찾기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EC%86%8C%EC%88%98%20%EC%B0%BE%EA%B8%B0.cpp)|
 |시저 암호|[시저 암호 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12926)|[시저 암호 문제 풀이](https://github.com/Eunno-An/Programmers/tree/main/Lv1)|
 |이상한 문자 만들기|[이상한 문자 만들기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12930)|[이상한 문자 만들기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EC%9D%B4%EC%83%81%ED%95%9C%20%EB%AC%B8%EC%9E%90%20%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp)|
+|제일 작은 수 제거하기|[제일 작은 수 제거하기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12935)|[제일 작은 수 제거하기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EC%A0%9C%EC%9D%BC%20%EC%9E%91%EC%9D%80%20%EC%88%98%20%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0.cpp)|
 
-### [Lv 2]
 ### [Lv 2]
 |문제|링크|코드| 
 |:---|:---:|---:| 
