@@ -1,7 +1,7 @@
 # Programmers
 프로그래머스 문제 풀이
 군대에서 코딩하기 챌린지
-<p align="center">
+<p align=center>
     [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FEunno-An&count_bg=%2379C83D&title_bg=%23555555&icon=cplusplus.svg&icon_color=%23A958C0&title=c%2B%2B&edge_flat=true)](https://hits.seeyoufarm.com)
 
 </p>
