@@ -67,3 +67,5 @@
 |게임 맵 최단거리|[게임 맵 최단거리 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/1844)|[게임 맵 최단거리 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%EA%B2%8C%EC%9E%84%20%EB%A7%B5%20%EC%B5%9C%EB%8B%A8%EA%B1%B0%EB%A6%AC.cpp)|
 |수식 최대화|[수식 최대화 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/67257#)|[수식 최대화 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%E2%98%85%EC%88%98%EC%8B%9D%20%EC%B5%9C%EB%8C%80%ED%99%94.cpp)|
 |메뉴 리뉴얼|[메뉴 리뉴얼 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/72411)|[메뉴 리뉴얼 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%E2%98%85%EB%A9%94%EB%89%B4%20%EB%A6%AC%EB%89%B4%EC%96%BC.cpp)|
+|프린터|[프린터 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42587)|[프린터 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%ED%94%84%EB%A6%B0%ED%84%B0.cpp)|
+
