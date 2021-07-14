@@ -6,7 +6,7 @@ using namespace std;
 int arr[51][51];
 bool visit[51];
 int already[51];
-//dilivery(start, K) = (i = adj(start))sigma(dilivery(i, K - arr[start][i]));
+
 //굳이 int형으로 하지 말고, 잘 생각해보면 visit으로만 쓰면 오류가 발생한다. 그러니까, 한번이라도 방문했던 점들만 기록하는 already를썼다.
 void dilivery(int start, int K, int N) {
     if (K < 0) {
