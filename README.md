@@ -70,3 +70,5 @@
 |프린터|[프린터 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42587)|[프린터 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%ED%94%84%EB%A6%B0%ED%84%B0.cpp)|
 |거리두기 확인하기|[거리두기 확인하기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/81302?language=cpp)|[거리두기 확인하기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%EA%B1%B0%EB%A6%AC%EB%91%90%EA%B8%B0%20%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0.cpp)|
 |괄호 변환|[괄호 변환 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/60058p)|[괄호 변환 문제 풀이](https://github.com/Eunno-An/Programmers/tree/main/Lv2)|
+|괄호 회전하기|[괄호 회전하기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/76502?language=cpp)|[괄호 회전하기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%EA%B4%84%ED%98%B8%20%ED%9A%8C%EC%A0%84%ED%95%98%EA%B8%B0.cpp)|
+|배달|[배달 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12978 )|[배달 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%EB%B0%B0%EB%8B%AC.cpp)|
