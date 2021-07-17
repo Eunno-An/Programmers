@@ -1,7 +1,9 @@
 # Programmers
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Eunno-An)](https://github.com/anuraghazra/github-readme-stats)
+
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FEunno-An&count_bg=%2379C83D&title_bg=%23555555&icon=cplusplus.svg&icon_color=%23A958C0&title=c%2B%2B&edge_flat=true)](https://hits.seeyoufarm.com)
+
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Eunno-An)](https://github.com/anuraghazra/github-readme-stats)
 
 
 
