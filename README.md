@@ -73,3 +73,4 @@
 |큰 수 만들기|[큰 수 만들기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42883)|[큰 수 만들기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%E2%98%85%ED%81%B0%20%EC%88%98%20%EB%A7%8C%EB%93%A4%EA%B8%B0.cpp)|
 |H-index|[H-index 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42747#)|[H-index 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/H-index.cpp)|
 |순위 검색|[순위 검색 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/72412#qna)|[순위 검색 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%E2%98%85%E2%98%85%EC%88%9C%EC%9C%84%20%EA%B2%80%EC%83%89.cpp)|
+|가장 큰 수|[가장 큰 수 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42746?language=cpp#)|[가장 큰 수 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%E2%98%85%EA%B0%80%EC%9E%A5%20%ED%81%B0%20%EC%88%98.cpp)|
