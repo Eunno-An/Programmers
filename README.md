@@ -76,3 +76,4 @@
 |가장 큰 수|[가장 큰 수 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42746?language=cpp#)|[가장 큰 수 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%E2%98%85%EA%B0%80%EC%9E%A5%20%ED%81%B0%20%EC%88%98.cpp)|
 |영어 끝말잇기|[영어 끝말잇기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12981)|[영어 끝말잇기 문제 풀이](https://github.com/Eunno-An/Programmers/tree/main/Lv2)|
 |구명보트|[구명보트 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42885#)|[구명보트 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%EA%B5%AC%EB%AA%85%EB%B3%B4%ED%8A%B8.cpp)|
+|2개 이하로 다른 비트|[2개 이하로 다른 비트 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/77885)|[2개 이하로 다른 비트 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%E2%98%85%E2%98%852%EA%B0%9C%20%EC%9D%B4%ED%95%98%EB%A1%9C%20%EB%8B%A4%EB%A5%B8%20%EB%B9%84%ED%8A%B8.cpp)|
