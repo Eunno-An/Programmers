@@ -81,3 +81,4 @@
 |주식 가격|[주식 가격 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42584)|[주식 가격 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%EC%A3%BC%EC%8B%9D%EA%B0%80%EA%B2%A9.cpp)|
 |점프와 순간 이동|[점프와 순간 이동 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12980)|[점프와 순간 이동 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%EC%A0%90%ED%94%84%EC%99%80%20%EC%88%9C%EA%B0%84%20%EC%9D%B4%EB%8F%99.cpp)|
 |이진 변환 반복하기|[이진 변환 반복하기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/70129)|[이진 변환 반복하기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%EC%9D%B4%EC%A7%84%20%EB%B3%80%ED%99%98%20%EB%B0%98%EB%B3%B5%ED%95%98%EA%B8%B0.cpp)|
+|스킬 트리|[스킬 트리 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/49993?language=cpp)|[스킬 트리 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%EC%8A%A4%ED%82%AC%20%ED%8A%B8%EB%A6%AC.cpp)|
