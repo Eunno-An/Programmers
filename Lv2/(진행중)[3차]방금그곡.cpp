@@ -7,7 +7,7 @@
 using namespace std;
 bool compare(pair<pair<int, string>, int> a, pair<pair<int, string>, int> b){
     if(a.first.first == b.first.first){
-        return a.second < b.second;
+        return a.second > b.second;
     }
     return a.first.first > b.first.first;
 }
