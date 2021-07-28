@@ -41,13 +41,14 @@ string solution(string m, vector<string> musicinfos) {
         string info = song_info[3];
 
         queue<int> info_int;
-        
+        int count_info =0 ;
         for (int j = 0; j < info.size(); j++) {
             if (info[j] == '#')
                 info_int.push(-1);
-            else 
+            else {
                 info_int.push(info[j]);
-                
+                count_info++;
+            }
             
                 
         }
@@ -85,7 +86,7 @@ string solution(string m, vector<string> musicinfos) {
             if (top_remember == top_melody && isSharp_remember == isSharp) {
                 matchCount++;
                 if (matchCount == songLength) {
-                    matches.push_back(make_pair(make_pair(songLength, songTitle), i));
+                    matches.push_back(make_pair(make_pair(count_info, songTitle), i));
                     break;
                 }
                 remember.push(top_remember);
