@@ -8,6 +8,7 @@
 
 
 코딩좀 잘하고시픈디...!
+그리디공부중
 </p>
 
 [못한 날들에 대한 변명들..?](https://github.com/Eunno-An/Programmers/blob/main/%EB%AA%BB%ED%95%9C%20%EB%82%A0%EB%93%A4...!)
