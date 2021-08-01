@@ -87,3 +87,4 @@
 |방문 길이|[방문 길이 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/49994)|[방문 길이 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%E2%98%85%EB%B0%A9%EB%AC%B8%20%EA%B8%B8%EC%9D%B4.cpp)|
 |가장 큰 정사각형|[가장 큰 정사각형 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12905)|[가장 큰 정사각형 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%E2%98%85%EA%B0%80%EC%9E%A5%20%ED%81%B0%20%EC%A0%95%EC%82%AC%EA%B0%81%ED%98%95.cpp)|
 |[3차]파일명 정렬|[[3차]파일명 정렬 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/17686#)|[[3차]파일명 정렬 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%E2%98%85%5B3%EC%B0%A8%5D%ED%8C%8C%EC%9D%BC%EB%AA%85%20%EC%A0%95%EB%A0%AC.cpp)|
+|[3차]n진수 게임|[[3차]n진수 게임 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/17687)|[[3차]n진수 게임 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%5B3%EC%B0%A8%5D%20n%EC%A7%84%EC%88%98%20%EA%B2%8C%EC%9E%84.cpp)|
