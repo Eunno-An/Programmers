@@ -91,3 +91,4 @@
 |다음 큰 숫자|[다음 큰 숫자 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12911)|[다음 큰 숫자 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%EB%8B%A4%EC%9D%8C%20%ED%81%B0%20%EC%88%AB%EC%9E%90.cpp)|
 |땅따먹기|[땅따먹기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12913)|[땅따먹기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%EB%95%85%EB%94%B0%EB%A8%B9%EA%B8%B0.cpp)|
 |JadenCase|[JadenCase 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12951#)|[JadenCase 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/JadenCase.cpp)|
+|소수 찾기|[소수 찾기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42839#)|[소수 찾기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%EC%86%8C%EC%88%98%20%EC%B0%BE%EA%B8%B0.cpp)|
