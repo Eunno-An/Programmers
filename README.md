@@ -93,3 +93,4 @@ lv2 얼마 안남았다!
 |땅따먹기|[땅따먹기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12913)|[땅따먹기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%EB%95%85%EB%94%B0%EB%A8%B9%EA%B8%B0.cpp)|
 |JadenCase|[JadenCase 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12951#)|[JadenCase 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/JadenCase.cpp)|
 |소수 찾기|[소수 찾기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42839#)|[소수 찾기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%EC%86%8C%EC%88%98%20%EC%B0%BE%EA%B8%B0.cpp)|
+|조이 스틱|[조이 스틱 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42860#)|[조이 스틱 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%E2%98%85%EC%A1%B0%EC%9D%B4%EC%8A%A4%ED%8B%B1.cpp)|
