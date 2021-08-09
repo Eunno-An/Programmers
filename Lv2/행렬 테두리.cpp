@@ -1,14 +1,14 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <iostream>
 using namespace std;
 
-//로직은 맞는데 사소한 부분에서 에러가 
 int arr[101][101];
 void init(int rows, int cols) {
     for (int i = 1; i <= rows; i++)
         for (int j = 1; j <= cols; j++)
-            arr[i][j] = (i - 1) * rows + j;
+            arr[i][j] = (i - 1) * cols + j;
 }
 vector<int> solution(int rows, int columns, vector<vector<int>> queries) {
     vector<int> answer;
@@ -50,56 +50,46 @@ vector<int> solution(int rows, int columns, vector<vector<int>> queries) {
         int leftBottom = arr[y2][x1];
         int rightBottom = arr[y2][x2];
 
-        //(y1, x2-1) 부터 (y1, x1+1)에 있는 수를 오른쪽으로 한 칸 이동한다.
+
         vector<int> temp;
-        for (int i = x2 - 1; i >= x1 + 1; i--) {
-            arr[y1][i + 1] = arr[y1][i];
-            temp.push_back(arr[y1][i]);
-        }
+        for (int j = y1; j <= y2; j++)
+            for (int k = x1; k <= x2; k++)
+                if (j == y1 || j == y2 || k == x1 || k == x2)
+                    temp.push_back(arr[j][k]);
 
-        //(y2-1, x2) 부터 (y1+1, x2)에 있는 수를 아래로 한 칸 이동한다.
-        for (int i = y2 - 1; i >= y1 + 1; i--) {
-
-            arr[i + 1][x2] = arr[i][x2];
-            temp.push_back(arr[i][x2]);
-
-        }
-        //(y2, x1+1) 부터 (y2, x2-1)에 있는 수를 왼쪽으로 한 칸 이동한다.
-        for (int i = x1 + 1; i <= x2 - 1; i++) {
-
-            arr[y2][i - 1] = arr[y2][i];
-            temp.push_back(arr[y2][i]);
-        }
-
-        //(y2-1, x1) 부터 (y1+1, x1)에 있는 수를 위로 한 칸 이동한다.
-        for (int i = y1 + 1; i <= y2 - 1; i++) {
-
-            arr[i - 1][x1] = arr[i][x1];
-            temp.push_back(arr[i][x1]);
-        }
-
-        arr[y1 + 1][x2] = rightTop;
-        arr[y2][x2 - 1] = rightBottom;
-        arr[y2 - 1][x1] = leftBottom;
+        //(y1, x2-1) 부터 (y1, x1+1)에 있는 수를 오른쪽으로 한 칸 이동한다.
+        for (int j = x2 - 1; j >= x1 + 1; j--)
+            arr[y1][j + 1] = arr[y1][j];
         arr[y1][x1 + 1] = leftTop;
 
-        temp.push_back(rightTop);
-        temp.push_back(rightBottom);
-        temp.push_back(leftBottom);
-        temp.push_back(leftTop);
+
+        //(y2-1, x2) 부터 (y1+1, x2)에 있는 수를 아래로 한 칸 이동한다.
+        for (int j = y2 - 1; j >= y1 + 1; j--)
+            arr[j + 1][x2] = arr[j][x2];
+        arr[y1 + 1][x2] = rightTop;
+
+        //(y2, x1+1) 부터 (y2, x2-1)에 있는 수를 왼쪽으로 한 칸 이동한다.
+        for (int j = x1 + 1; j <= x2 - 1; j++)
+            arr[y2][j - 1] = arr[y2][j];
+        arr[y2][x2 - 1] = rightBottom;
+
+
+        //(y2-1, x1) 부터 (y1+1, x1)에 있는 수를 위로 한 칸 이동한다.
+        for (int j = y1 + 1; j <= y2 - 1; j++)
+            arr[j - 1][x1] = arr[j][x1];
+        arr[y2 - 1][x1] = leftBottom;
         //기존과 다른 수들이 있으면 넣는다.
 
         sort(temp.begin(), temp.end());
         answer.push_back(temp[0]);
     }
 
-    //sort(answer.begin(), answer.end());
-
     return answer;
 }
 
 int main() {
-    solution(6, 6, { {2, 2,5,4},{3,3,6,6},{5,1,6,3} });
-    solution(3, 3, { {1,1,2,2},{1,2,2,3},{2,1,3,2},{2,2,3,3} });
-    solution(100, 97, { {1,1,100,97} });
+    //solution(6, 6, { {2, 2,5,4},{3,3,6,6},{5,1,6,3} });
+    //solution(3, 3, { {1,1,2,2},{1,2,2,3},{2,1,3,2},{2,2,3,3} });
+    //solution(100, 97, { {1,1,100,97} });
+    solution(100, 2, { {2, 1, 3, 2} });
 }
