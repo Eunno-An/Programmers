@@ -1,3 +1,4 @@
+//96번 부호가 맞는가?..
 #include <string>
 #include <vector>
 #include <iostream>
@@ -83,7 +84,7 @@ pair<string, long long> calculating(string f, int b, int op, bool isReverse) { /
     return result_pair = getResult_FromFormula(formula);
 }
 int solution(int N, int number) {
-    int answer = 0;
+    int answer = 1;
     vector<vector<string>> formulas(number * 2 + 1);
     //formulas[i]에는 N을 i번 만큼 사용했을 때 들어갈 수 있는 값의 후보들이 들어간다.
     //그렇다면 formulas[i+1]에는 기존의 formulas[i]에 있었던 값들에 4번 + 4번의 사칙연산을 적용한 값들과, N을 i+1번 붙인 값이 들어간다.
@@ -93,7 +94,7 @@ int solution(int N, int number) {
     if (N == number)
         return 1;
     formulas[1].push_back(to_string(N));
-    for (int use_N = 1; use_N < number * 2; use_N++) {
+    for (int use_N = 1; use_N <= number * 2; use_N++) {
         if (use_N == 8)
             return -1; //최솟값이 8보다 크면 -1을 리턴하라. 왜냐하면 수의 범위 때문에 그런듯 하다.
 
@@ -120,7 +121,7 @@ int solution(int N, int number) {
         if (to_string(number) == number_str)
             return use_N + 1;
         formulas[use_N + 1].push_back(number_str);
-
+        answer++;
     }
     return answer;
 }
