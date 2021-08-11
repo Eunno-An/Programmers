@@ -1,3 +1,5 @@
+//1. 종만북에서 나오는 왠만하면 실수 연산을 쓰지 말것
+//2. check_overlap_section 함수에서 시간 비교하는 함수 로직 다시 볼것. 여기서 시간 많이 잡아먹음.
 #include <string>
 #include <vector>
 #include <sstream>
@@ -8,35 +10,36 @@ class Time {
 public:
     int hour;
     int minute;
-    double second;
-    Time(int h, int m, double s) {
+    int second;
+    Time(int h, int m, int s) {
         hour = h;
         minute = m;
         second = s;
     }
 };
-Time getReplyStartTime(Time replyCompleteTime, double conditioningTime) {
+Time getReplyStartTime(Time replyCompleteTime, int conditioningTime) {
     //추상적으로 표현: replyCompleteTime - conditioningTime + 0.001
     int& hour = replyCompleteTime.hour;
     int& minute = replyCompleteTime.minute;
-    double& seconds = replyCompleteTime.second;
+    int& seconds = replyCompleteTime.second;
 
+    //conditioningTime = round(conditioningTime * 1000) / 1000.0;
     seconds -= conditioningTime;
-    seconds = round(seconds * 1000) / 1000.0;
+    //seconds = round(seconds * 1000) / 1000.0;
     if (seconds < 0) {
         minute -= 1;
-        seconds += 60;
-        seconds = ceil(seconds * 1000) / 1000.0;
+        seconds += 60000;
+        //seconds = ceil(seconds * 1000) / 1000.0;
         if (minute < 0) {
             hour -= 1;
             minute += 60;
         }
     }
-    seconds += 0.001;
-    seconds = round(seconds * 1000) / 1000.0;
-    if (seconds >= 60) {
-        seconds -= 60;
-        seconds = ceil(seconds * 1000) / 1000.0;
+    seconds += 1;
+    //seconds = round(seconds * 1000) / 1000.0;
+    if (seconds >= 60000) {
+        seconds -= 60000;
+        //seconds = ceil(seconds * 1000) / 1000.0;
         minute += 1;
         if (minute >= 60) {
             minute -= 60;
@@ -53,11 +56,11 @@ Time getTime_AfterOneSec(Time startTime) {
     int minute = startTime.minute;
     double second = startTime.second;
 
-    second += 0.999;
-    second = round(second * 1000) / 1000;
-    if (second >= 60) {
-        second -= 60;
-        second = round(second * 1000) / 1000;
+    second += 999;
+    //second = round(second * 1000) / 1000;
+    if (second >= 60000) {
+        second -= 60000;
+        //second = round(second * 1000) / 1000;
         minute += 1;
         if (minute >= 60) {
             minute -= 60;
@@ -70,12 +73,19 @@ Time getTime_AfterOneSec(Time startTime) {
     return endTime;
 }
 bool check_overlap_section(Time time1, Time time2) {
-    return (time1.hour <= time2.hour && time1.minute <= time2.minute && time1.second <= time2.second) ? true : false;
+    //5:3:2  5: 4: 1
+    if(time1.hour > time2.hour)
+        return false;
+    else if(time1.hour == time2.hour && time1.minute > time2.minute)
+        return false;
+    else if(time1.hour == time2.hour && time1.minute == time2.minute && time1.second > time2.second)
+        return false;
+    return true;
 }
 int solution(vector<string> lines) {
     int answer = 0;
     vector<Time> times_replyComplete;
-    vector<double> times_conditioning;
+    vector<int> times_conditioning;
     for (int data = 0; data < lines.size(); data++) {
         stringstream logData(lines[data]);
         vector<string> lines_info;
@@ -89,12 +99,12 @@ int solution(vector<string> lines) {
         while (getline(timeData, blank, ':'))
             time_info.push_back(blank);
 
-        Time instance = Time(stoi(time_info[0]), stoi(time_info[1]), stod(time_info[2]));
+        Time instance = Time(stoi(time_info[0]), stoi(time_info[1]), stod(time_info[2])*1000);
         times_replyComplete.push_back(instance);
 
         //처리시간인 lines_info[2]의 뒤의 s를 뺌.
         lines_info[2].pop_back();
-        times_conditioning.push_back(stod(lines_info[2]));
+        times_conditioning.push_back(stod(lines_info[2])*1000);
     }
     //vector<Time> times_replyComplete: 응답 완료 시간 저장
     //vector<double> times_conditioning: 처리 시간 저장
@@ -110,8 +120,8 @@ int solution(vector<string> lines) {
         Time processing_EndTime1 = getTime_AfterOneSec(processing_StartTime1);
         int temp_answer = 1;
         for (int j = i + 1; j < times_replyComplete.size(); j++) {
-            Time processing_StartTime2(0, 0, 0.0), processing_EndTime2(0, 0, 0.0);
-            processing_StartTime2 = getReplyStartTime(times_replyComplete[j], times_conditioning[j]);
+            Time processing_StartTime2(0, 0, 0), processing_EndTime2(0, 0, 0);
+            processing_StartTime2 = times_replyStart[j];
             processing_EndTime2 = times_replyComplete[j];
             //
             if (check_overlap_section(processing_StartTime2, processing_EndTime1))
