@@ -99,7 +99,7 @@ lv2 얼마 안남았다!
 |숫자의 표현|[숫자의 표현 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12924)|[숫자의 표현 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%EC%88%AB%EC%9E%90%EC%9D%98%20%ED%91%9C%ED%98%84.cpp)|
 |예상 대진표|[예상 대진표 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12985#)|[예상 대진표 문제 풀이](https://github.com/Eunno-An/Programmers/tree/main/Lv2)|
 
-### [Lv 1]
+### [<span style="color:red">Lv 3</span>]
 |문제|링크|코드| 
 |:---|:---:|---:| 
 |[1차]추석 트래픽|[[1차]추석 트래픽 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/17676)|[[1차]추석 트래픽 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%5B1%EC%B0%A8%5D%20%EC%B6%94%EC%84%9D%20%ED%8A%B8%EB%9E%98%ED%94%BD.cpp)|
