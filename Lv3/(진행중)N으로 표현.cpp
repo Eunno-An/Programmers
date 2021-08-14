@@ -1,8 +1,13 @@
 //fail
+//나눗셈에 대한 예외처리 하였음.
+//1. 1번에 대한 예외처리: 8,53 -> 8*8 - 88/8로 해야 하는데, 그럴 경우 N=3, N=2로 각각 계산한 결과를 뺴 주어야 함. 근데 난 무지성으로 앞에서 부터 훑어 버렸고, 답이 제대로 나올 수가 없었음.
+//2. 5~8번에 대한 예외처리: N=4일 경우, 기존에 세개를 쓰던 방법에서 하나를 추가하는 방법으로 했지만, 생각해보니 2, 2인 경우도 생각해 주어야 했음.
+//3. 8번에 대한 예외처리 진행중.
 #include <string>
 #include <vector>
 #include <iostream>
 #include <map>
+#include <algorithm>
 using namespace std;
 
 //N 사용횟수의 후보는 1부터 number*2 까지이다.
@@ -52,37 +57,36 @@ pair<string, long long> getResult_FromFormula(string f) {//만들어진 공식�
     already_calculated_map.insert(make_pair(f, result));
     return make_pair(f, result);
 }
-pair<string, long long> calculating(string f, int b, int op, bool isReverse) { // 기존 공식에 operator와 N을 더해서 새로운 공식을 만들고, 그로부터 계산 결과값을 반환함.
+pair<string, long long> calculating(string f, string f2, int op) { // 기존 공식에 operator와 N을 더해서 새로운 공식을 만들고, 그로부터 계산 결과값을 반환함.
     string formula = "";
-    if (isReverse) { // f op b 순서
-        formula = f;
-        if (op == 0)
-            formula += "+";
-        else if (op == 1)
-            formula += "-";
-        else if (op == 2)
-            formula += "*";
-        else if (op == 3)
-            formula += "/";
-        formula += to_string(b);
+
+    formula = f;
+    pair<string, long long> res1 = getResult_FromFormula(f);
+    pair<string, long long> res2 = getResult_FromFormula(f2);
+    long long res_num = res1.second;
+    if (op == 0) {
+        formula += "+";
+        res_num += res2.second;
     }
-    else {//b op f 순서
-        formula = to_string(b);
-        if (op == 0)
-            formula += "+";
-        else if (op == 1)
-            formula += "-";
-        else if (op == 2)
-            formula += "*";
-        else if (op == 3)
-            formula += "/";
-        formula += f;
+    else if (op == 1) {
+        formula += "-";
+        res_num -= res2.second;
     }
-    long long result = 0;
+        
+    else if (op == 2) {
+        formula += "*";
+        res_num *= res2.second;
+    }
+    else if (op == 3 && res2.second != 0) {
+        formula += "/";
+        res_num /= res2.second;
+    }
+    if (op != 3 || res2.second != 0)
+        formula += f2;
     pair<string, long long> result_pair;
-    result_pair.first = f;
-    result_pair.second = result;
-    return result_pair = getResult_FromFormula(formula);
+    result_pair.first = formula;
+    result_pair.second = res_num;
+    return result_pair;
 }
 int solution(int N, int number) {
     int answer = 1;
@@ -95,37 +99,47 @@ int solution(int N, int number) {
     if (N == number)
         return 1;
     formulas[1].push_back(to_string(N));
-    for (int use_N = 1; use_N <= number * 2; use_N++) {
-        if (use_N == 8)
-            return -1; //최솟값이 8보다 크면 -1을 리턴하라. 왜냐하면 수의 범위 때문에 그런듯 하다.
 
-        for (int before = 0; before < formulas[use_N].size(); before++) {
-            string formula = formulas[use_N][before];
-            for (int op = 0; op < 4; op++) {
-                pair<string, long long> result = calculating(formula, N, op, true);
-                if (result.second == number)
-                    return answer = use_N + 1;
-
-                formulas[use_N + 1].push_back(result.first);
-            }
-            if (use_N > 2)
-                for (int op = 0; op < 4; op++) {
-                    pair<string, long long> result = calculating(formula, N, op, false);
-                    if (result.second == number)
-                        return answer = use_N + 1;
-                    formulas[use_N + 1].push_back(result.first);
-                }
-        }
+    for (int use_N = 2; use_N < 10; use_N++) {
+        if (use_N == 9)
+            return -1; // 최솟값이 8보다 클 경우, -1을 리턴한다.
         string number_str = "";
-        for (int i = 0; i <= use_N; i++) //N을 i+1번 붙인 값을 formulas[i+1]에 넣는다. 
+        for (int i = 0; i < use_N; i++) //N을 use_N번 붙인 값을 formulas[i+1]에 넣는다. 
             number_str += to_string(N);
         if (to_string(number) == number_str)
-            return use_N + 1;
-        formulas[use_N + 1].push_back(number_str);
-        answer++;
+            return use_N;
+        formulas[use_N].push_back(number_str);
+        for (int first = 1; first < use_N; first++) {//first = 기존에 사용한 N의 개수. 이건 formulas[first]에 저장되어 있는 식이다.
+
+            vector<string> formulas_first = formulas[first];
+            vector<string> formulas_second = formulas[use_N - first];
+            for (int i = 0; i < formulas_first.size(); i++) {
+                string formula1 = formulas_first[i];
+                for (int j = 0; j < formulas_second.size(); j++) {
+                    string formula2 = formulas_second[j];
+                    for (int op = 0; op < 4; op++) {
+                        pair<string, long long> result = calculating(formula1, formula2, op);
+                        if (result.second == number)
+                            return answer = use_N;
+                        formulas[use_N].push_back(result.first);
+                        string temp = result.first;
+                        result = calculating(formula2, formula1, op);
+                        if (result.second == number)
+                            return answer = use_N;
+                        if (temp != result.first)
+                            formulas[use_N].push_back(result.first);
+                    }
+                }
+            }
+
+        }
+        sort(formulas[use_N].begin(), formulas[use_N].end());
+        formulas[use_N].erase(unique(formulas[use_N].begin(), formulas[use_N].end()), formulas[use_N].end());
     }
-    return answer;
+
+
+    return -1;
 }
 int main() {
-    solution(5, 5);
+    solution(8, 53);
 }
