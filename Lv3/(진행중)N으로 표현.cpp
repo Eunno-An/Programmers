@@ -2,7 +2,8 @@
 //나눗셈에 대한 예외처리 하였음.
 //1. 1번에 대한 예외처리: 8,53 -> 8*8 - 88/8로 해야 하는데, 그럴 경우 N=3, N=2로 각각 계산한 결과를 뺴 주어야 함. 근데 난 무지성으로 앞에서 부터 훑어 버렸고, 답이 제대로 나올 수가 없었음.
 //2. 4~7번에 대한 예외처리: N=4일 경우, 기존에 세개를 쓰던 방법에서 하나를 추가하는 방법으로 했지만, 생각해보니 2, 2인 경우도 생각해 주어야 했음.
-//3. 8번에 대한 예외처리 진행중.
+//3. 8번에 대한 예외처리 진행중.(8, 5800) -> 8이 나와야 하는데 -1이 나옴. 시간도 오래 걸리니 한번 중복을 줄이는 방법 조사해 보기.
+//96번 부호가 맞는가?..
 #include <string>
 #include <vector>
 #include <iostream>
@@ -63,6 +64,7 @@ pair<string, long long> calculating(string f, string f2, int op) { // 기존 공
     formula = f;
     pair<string, long long> res1 = getResult_FromFormula(f);
     pair<string, long long> res2 = getResult_FromFormula(f2);
+    
     long long res_num = res1.second;
     if (op == 0) {
         formula += "+";
@@ -72,7 +74,7 @@ pair<string, long long> calculating(string f, string f2, int op) { // 기존 공
         formula += "-";
         res_num -= res2.second;
     }
-        
+
     else if (op == 2) {
         formula += "*";
         res_num *= res2.second;
@@ -90,7 +92,7 @@ pair<string, long long> calculating(string f, string f2, int op) { // 기존 공
 }
 int solution(int N, int number) {
     int answer = 1;
-    vector<vector<string>> formulas(number * 2 + 1);
+    vector<vector<string>> formulas(10);
     //formulas[i]에는 N을 i번 만큼 사용했을 때 들어갈 수 있는 값의 후보들이 들어간다.
     //그렇다면 formulas[i+1]에는 기존의 formulas[i]에 있었던 값들에 4번 + 4번의 사칙연산을 적용한 값들과, N을 i+1번 붙인 값이 들어간다.
 
@@ -118,16 +120,12 @@ int solution(int N, int number) {
                 for (int j = 0; j < formulas_second.size(); j++) {
                     string formula2 = formulas_second[j];
                     for (int op = 0; op < 4; op++) {
+                        if (op == 3 && getResult_FromFormula(formula2).second == 0)
+                            continue;
                         pair<string, long long> result = calculating(formula1, formula2, op);
                         if (result.second == number)
                             return answer = use_N;
                         formulas[use_N].push_back(result.first);
-                        string temp = result.first;
-                        result = calculating(formula2, formula1, op);
-                        if (result.second == number)
-                            return answer = use_N;
-                        if (temp != result.first)
-                            formulas[use_N].push_back(result.first);
                     }
                 }
             }
@@ -141,5 +139,5 @@ int solution(int N, int number) {
     return -1;
 }
 int main() {
-    solution(8, 53);
+    solution(8, 5800);
 }
