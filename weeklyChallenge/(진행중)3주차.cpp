@@ -13,7 +13,7 @@ bool visit_table[51][51];
 void init(vector<vector<int>> g, vector<vector<int>> t) {
     board_height = g.size();
     board_row = g[0].size();
-    for (int i = 0; i < board_height; i++) 
+    for (int i = 0; i < board_height; i++)
         for (int j = 0; j < board_row; j++) {
             visit_board[i][j] = false;
             visit_table[i][j] = false;
@@ -45,7 +45,7 @@ void printTableInfo() {
 
 //game_board용
 bool ok(int y, int x) {
-    return (y >= 0 && y < board_height&& x >= 0 && x < board_row && game_board[y][x] == 0) ? true : false;
+    return (y >= 0 && y < board_height&& x >= 0 && x < board_row&& game_board[y][x] == 0) ? true : false;
 }
 //table용
 bool ok2(int y, int x) {
@@ -80,7 +80,7 @@ void dfs_board(int y, int x) {
             dfs_board(y + dy[dir], x + dx[dir]);
         }
     }
-    
+
     return;
 }
 void dfs_table(int y, int x) {
@@ -96,12 +96,11 @@ void dfs_table(int y, int x) {
 
     return;
 }
-int solution(vector<vector<int>> g, vector<vector<int>> t) {
-    int answer = -1;
-    init(g, t);
+
+void findEmptyPlaces_Board() {
     for (int i = 0; i < board_height; i++) {
         for (int j = 0; j < board_row; j++) {
-            if(ok(i, j) && visit_board[i][j] == false){
+            if (ok(i, j) && visit_board[i][j] == false) {
                 dfs_board(i, j);
                 int emptySize = empty_pos_of_blocks.size();
                 vector<vector<pair<int, int>>> temp;
@@ -115,7 +114,8 @@ int solution(vector<vector<int>> g, vector<vector<int>> t) {
             }
         }
     }
-
+}
+void findBlocks_Table() {
     for (int i = 0; i < board_height; i++) {
         for (int j = 0; j < board_row; j++) {
             if (ok2(i, j) && visit_table[i][j] == false) {
@@ -132,7 +132,18 @@ int solution(vector<vector<int>> g, vector<vector<int>> t) {
             }
         }
     }
+}
+
+
+int solution(vector<vector<int>> g, vector<vector<int>> t) {
+    int answer = -1;
+    init(g, t);
+    findEmptyPlaces_Board();
+    findBlocks_Table();
+
+    //rotate를 어떻게 구현하지..
     
+
     return answer;
 }
 int main() {
