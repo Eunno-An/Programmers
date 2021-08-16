@@ -104,3 +104,4 @@ lv2 얼마 안남았다!
 |문제|링크|코드| 
 |:---|:---:|---:| 
 |[1차]추석 트래픽|[[1차]추석 트래픽 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/17676)|[[1차]추석 트래픽 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%5B1%EC%B0%A8%5D%20%EC%B6%94%EC%84%9D%20%ED%8A%B8%EB%9E%98%ED%94%BD.cpp)|
+|N으로 표현|[N으로 표현](https://programmers.co.kr/learn/courses/30/lessons/42895)|[N으로 표현](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%E2%98%85%E2%98%85N%EC%9C%BC%EB%A1%9C%20%ED%91%9C%ED%98%84.cpp)|
