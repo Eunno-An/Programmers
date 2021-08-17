@@ -106,3 +106,4 @@ lv2 얼마 안남았다!
 |[1차]추석 트래픽|[[1차]추석 트래픽 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/17676)|[[1차]추석 트래픽 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%5B1%EC%B0%A8%5D%20%EC%B6%94%EC%84%9D%20%ED%8A%B8%EB%9E%98%ED%94%BD.cpp)|
 |N으로 표현|[N으로 표현 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42895)|[N으로 표현 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%E2%98%85%E2%98%85N%EC%9C%BC%EB%A1%9C%20%ED%91%9C%ED%98%84.cpp)|
 |정수 삼각형|[정수 삼각형 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/43105)|[정수 삼각형 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%E2%98%85%EC%A0%95%EC%88%98%20%EC%82%BC%EA%B0%81%ED%98%95.cpp)|
+|등굣길|[등굣길 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42898)|[등굣길 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%E2%98%85%EB%93%B1%EA%B5%A3%EA%B8%B8.cpp)|
