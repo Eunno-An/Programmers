@@ -10,6 +10,8 @@ int game_board[51][51];
 int table[51][51];
 bool visit_board[51][51];
 bool visit_table[51][51];
+bool usedPuzzle[2501];
+int blockNum, emptyNum;
 void init(vector<vector<int>> g, vector<vector<int>> t) {
     board_height = g.size();
     board_row = g[0].size();
@@ -57,17 +59,23 @@ vector<pair<int, int>> empty_pos_of_blocks;
 //table에서 block들의 상대 좌표들을 저장하는 '임시'벡터
 vector<pair<int, int>> pos_of_blocks;
 
-map<int, vector<vector<pair<int, int>>>> blanks_gameBoard;
-map<int, vector<vector<pair<int, int>>>> blocks_table;
+map<int, vector<pair<int, int>>> blanks_gameBoard;
+map<int, vector<pair<int, int>>> blocks_table;
 
 void print_blanks_gameBoard() {
     for (auto it : blanks_gameBoard) {
-        cout << "emptySize is : " << it.first << endl;
-        for (int i = 0; i < it.second.size(); i++) {
-            for (int j = 0; j < it.second[i].size(); j++)
-                cout << it.second[i][j].first << ',' << it.second[i][j].second << ' ';
-            cout << endl;
-        }
+        cout << "emptyNum is : " << it.first << endl;
+        for (int i = 0; i < it.second.size(); i++) 
+            cout << it.second[i].first << ',' << it.second[i].second << ' ';   
+        cout << endl;
+    }
+}
+void print_blocks_gameBoard() {
+    for (auto it : blocks_table) {
+        cout << "emptyNum is : " << it.first << endl;
+        for (int i = 0; i < it.second.size(); i++)
+            cout << it.second[i].first << ',' << it.second[i].second << ' ';
+        cout << endl;
     }
 }
 void dfs_board(int y, int x) {
@@ -103,13 +111,9 @@ void findEmptyPlaces_Board() {
             if (ok(i, j) && visit_board[i][j] == false) {
                 dfs_board(i, j);
                 int emptySize = empty_pos_of_blocks.size();
-                vector<vector<pair<int, int>>> temp;
-                if (blanks_gameBoard.find(emptySize) == blanks_gameBoard.end()) {
-                    blanks_gameBoard.insert(make_pair(emptySize, temp));
-                    blanks_gameBoard[emptySize].push_back(empty_pos_of_blocks);
-                }
-                else
-                    blanks_gameBoard[emptySize].push_back(empty_pos_of_blocks);
+
+                blanks_gameBoard.insert(make_pair(emptyNum++, empty_pos_of_blocks));
+
                 empty_pos_of_blocks.clear();
             }
         }
@@ -122,30 +126,69 @@ void findBlocks_Table() {
                 dfs_table(i, j);
                 int blockSize = pos_of_blocks.size();
                 vector<vector<pair<int, int>>> temp;
-                if (blocks_table.find(blockSize) == blocks_table.end()) {
-                    blocks_table.insert(make_pair(blockSize, temp));
-                    blocks_table[blockSize].push_back(pos_of_blocks);
-                }
-                else
-                    blocks_table[blockSize].push_back(pos_of_blocks);
+
+                blocks_table.insert(make_pair(blockNum++, pos_of_blocks));
+
                 pos_of_blocks.clear();
             }
         }
     }
 }
 
-
+void rotate90(vector<pair<int, int>> &blockData) {
+    int offsetX = 123, offsetY = 123;
+    for (auto p : blockData) {
+        swap(p.first, p.second); p.second *= -1;
+        offsetX = min(offsetX, p.first);
+        offsetY = min(offsetY, p.second);
+    }
+    for (auto p : blockData) {
+        p.first -= offsetX;
+        p.second -= offsetY;
+    }
+}
+bool canMatch(int i, int j) {
+    if (blanks_gameBoard[i].size() != blocks_table[j].size()) return 0;
+    int emptyCount = blanks_gameBoard[i].size();
+    vector <pair<int, int>> targetPuzzleSet = blocks_table[j];
+    for (int rt = 0; rt < 4; rt++) {
+        rotate90(targetPuzzleSet);
+        int matchCount = 0;
+        for (auto p : blanks_gameBoard[i]) {
+            for (auto p2 : targetPuzzleSet) {
+                if (p.first == p2.first && p.second == p2.second) {
+                    matchCount++;
+                    break;
+                }
+            }
+            if (matchCount == emptyCount) return 1;
+        }
+    }
+    return 0;
+}
 int solution(vector<vector<int>> g, vector<vector<int>> t) {
     int answer = -1;
     init(g, t);
     findEmptyPlaces_Board();
     findBlocks_Table();
 
-    //rotate를 어떻게 구현하지..
     
 
+    for (int i = 0; i < blanks_gameBoard.size(); i++) {
+        for (int j = 0; j < blocks_table.size(); j++) {
+            if (usedPuzzle[j]) continue;
+            if (canMatch(i, j)) {
+                usedPuzzle[j] = 1;
+                answer += blocks_table[j].size();
+                break;
+            }
+        }
+    }
+
+
+    cout << answer << '\n';
     return answer;
 }
 int main() {
-    solution({ {0,0,0},{1,1,0},{1,1,1} }, { {1,1,1},{1,0,0},{0,0,0} });
+    solution({ {1,1,0,0,1,0},{0,0,1,0,1,0},{0,1,1,0,0,1}, {1,1,0,1,1,1}, {1,0,0,0,1,0}, {0,1,1,1,0,0} }, { {1,0,0,1,1,0},{1,0,1,0,1,0},{0,1,1,0,1,1},{0, 0, 1, 0, 0, 0}, {1, 1, 0, 1, 1, 0 }, {0, 1, 0, 0, 0, 0} });
 }
