@@ -1,7 +1,11 @@
+//fail...
+//왜냐하면 rotate를 구현하는데 아이디어를 ... 못떠올림.
 #include <string>
 #include <vector>
 #include <iostream>
 #include <map>
+#include <algorithm>
+//https://giiro.tistory.com/entry/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EC%9C%84%ED%81%B4%EB%A6%AC-%EC%B1%8C%EB%A6%B0%EC%A7%80-3%EC%A3%BC%EC%B0%A8-%ED%8D%BC%EC%A6%90-%EC%A1%B0%EA%B0%81-%EC%B1%84%EC%9A%B0%EA%B8%B0
 using namespace std;
 const int dx[4] = { 1, 0, -1, 0 };
 const int dy[4] = { 0, 1, 0, -1 };
@@ -65,8 +69,8 @@ map<int, vector<pair<int, int>>> blocks_table;
 void print_blanks_gameBoard() {
     for (auto it : blanks_gameBoard) {
         cout << "emptyNum is : " << it.first << endl;
-        for (int i = 0; i < it.second.size(); i++) 
-            cout << it.second[i].first << ',' << it.second[i].second << ' ';   
+        for (int i = 0; i < it.second.size(); i++)
+            cout << it.second[i].first << ',' << it.second[i].second << ' ';
         cout << endl;
     }
 }
@@ -111,7 +115,15 @@ void findEmptyPlaces_Board() {
             if (ok(i, j) && visit_board[i][j] == false) {
                 dfs_board(i, j);
                 int emptySize = empty_pos_of_blocks.size();
-
+                int minY = 123, minX = 123;
+                for (int k = 0; k < empty_pos_of_blocks.size(); k++) {
+                    minY = min(minY, empty_pos_of_blocks[k].first);
+                    minX = min(minX, empty_pos_of_blocks[k].second);
+                }
+                for (int k = 0; k < empty_pos_of_blocks.size(); k++) {
+                    empty_pos_of_blocks[k].first -= minY;
+                    empty_pos_of_blocks[k].second -= minX;
+                }
                 blanks_gameBoard.insert(make_pair(emptyNum++, empty_pos_of_blocks));
 
                 empty_pos_of_blocks.clear();
@@ -125,7 +137,15 @@ void findBlocks_Table() {
             if (ok2(i, j) && visit_table[i][j] == false) {
                 dfs_table(i, j);
                 int blockSize = pos_of_blocks.size();
-                vector<vector<pair<int, int>>> temp;
+                int minY = 123, minX = 123;
+                for (int k = 0; k < pos_of_blocks.size(); k++) {
+                    minY = min(minY, pos_of_blocks[k].first);
+                    minX = min(minX, pos_of_blocks[k].second);
+                }
+                for (int k = 0; k < pos_of_blocks.size(); k++) {
+                    pos_of_blocks[k].first -= minY;
+                    pos_of_blocks[k].second -= minX;
+                }
 
                 blocks_table.insert(make_pair(blockNum++, pos_of_blocks));
 
@@ -135,14 +155,14 @@ void findBlocks_Table() {
     }
 }
 
-void rotate90(vector<pair<int, int>> &blockData) {
+void rotate90(vector<pair<int, int>>& blockData) {
     int offsetX = 123, offsetY = 123;
-    for (auto p : blockData) {
+    for (auto& p : blockData) {
         swap(p.first, p.second); p.second *= -1;
         offsetX = min(offsetX, p.first);
         offsetY = min(offsetY, p.second);
     }
-    for (auto p : blockData) {
+    for (auto& p : blockData) {
         p.first -= offsetX;
         p.second -= offsetY;
     }
@@ -154,25 +174,26 @@ bool canMatch(int i, int j) {
     for (int rt = 0; rt < 4; rt++) {
         rotate90(targetPuzzleSet);
         int matchCount = 0;
-        for (auto p : blanks_gameBoard[i]) {
-            for (auto p2 : targetPuzzleSet) {
+        for (auto& p : blanks_gameBoard[i]) {
+            for (auto& p2 : targetPuzzleSet) {
                 if (p.first == p2.first && p.second == p2.second) {
                     matchCount++;
                     break;
                 }
             }
-            if (matchCount == emptyCount) return 1;
+
         }
+        if (matchCount == emptyCount) return 1;
     }
     return 0;
 }
 int solution(vector<vector<int>> g, vector<vector<int>> t) {
-    int answer = -1;
+    int answer = 0;
     init(g, t);
     findEmptyPlaces_Board();
     findBlocks_Table();
 
-    
+
 
     for (int i = 0; i < blanks_gameBoard.size(); i++) {
         for (int j = 0; j < blocks_table.size(); j++) {
@@ -186,9 +207,6 @@ int solution(vector<vector<int>> g, vector<vector<int>> t) {
     }
 
 
-    cout << answer << '\n';
+    
     return answer;
-}
-int main() {
-    solution({ {1,1,0,0,1,0},{0,0,1,0,1,0},{0,1,1,0,0,1}, {1,1,0,1,1,1}, {1,0,0,0,1,0}, {0,1,1,1,0,0} }, { {1,0,0,1,1,0},{1,0,1,0,1,0},{0,1,1,0,1,1},{0, 0, 1, 0, 0, 0}, {1, 1, 0, 1, 1, 0 }, {0, 1, 0, 0, 0, 0} });
 }
