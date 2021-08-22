@@ -1,3 +1,6 @@
+//문제가 좀 이상해보임.
+//뭐 그래도 나는 aBcDcEa 같은 케이스는 해결 못해긴 했는데
+//이거 해결 했어도 통과 못하는 사람들 보면 뭔가 문제가 있는듯.
 #include <string>
 #include <vector>
 #include <string.h>
