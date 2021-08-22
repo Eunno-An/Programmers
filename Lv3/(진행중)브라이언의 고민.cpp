@@ -1,9 +1,15 @@
 #include <string>
 #include <vector>
+#include <string.h>
+#include <iostream>
 using namespace std;
 
 // 전역 변수를 정의할 경우 함수 내에 초기화 코드를 꼭 작성해주세요.
 string solution(string sentence) {
+    for (int i = 0; i < sentence.size(); i++) {
+        if (sentence[i] == ' ')
+            return "invalid";
+    }
     string answer = "";
     //대문자 다음에 소문자 -> rule1
     //소문자 다음에 대문자 -> rule2
@@ -35,6 +41,7 @@ string solution(string sentence) {
             string word = string(1, sentence[0]);
             int end_idx = -1; // 단어의 끝 인덱스
             int upperCount = 1; // 연속된 대문자의 개수
+            int lowerCount = 0;
             for (int i = 1; i < sentence.size(); i++) {
                 if (islower(sentence[i]) && sentence[i] != nowUseLower) {
                     end_idx = i;
@@ -47,9 +54,15 @@ string solution(string sentence) {
                             break;
                         }
                         upperCount++;
+                        lowerCount = 0;
                     }
-                    else
+                    else {
+                        if (lowerCount == 1) {
+                            return "invalid";
+                        }
+                        lowerCount++;
                         upperCount = 0;
+                    }
                     word += sentence[i];
                 }
             }
@@ -112,7 +125,5 @@ string solution(string sentence) {
     return answer;
 }
 int main() {
-    solution("HaEaLaLaObWORLDb");
-    solution("SpIpGpOpNpGJqOqA");
-    solution("AxAxAxAoBoBoB");
+    cout << solution("Aaa") << endl;
 }
