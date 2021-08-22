@@ -79,7 +79,7 @@ string solution(string sentence) {
             //aBaC
             nowUseLower = sentence[0];
             
-            if (sentence.size() == 1 || used[nowUseLower]) {//소문자 하나로만 이루어져 있는 경우, 또는 이미 사용한 소문자일 경우
+            if (sentence.size() == 1 || used[nowUseLower-97]) {//소문자 하나로만 이루어져 있는 경우, 또는 이미 사용한 소문자일 경우
                 rule = 3;
                 continue;
             }
@@ -125,5 +125,5 @@ string solution(string sentence) {
     return answer;
 }
 int main() {
-    cout << solution("Aaa") << endl;
+    cout << solution("xAx") << endl;
 }
