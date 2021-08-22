@@ -26,19 +26,27 @@ string solution(string sentence) {
             //AA
             //AbA
             //Ab
-
+            string word = string(1, sentence[0]);
             if (sentence.size() > 1)
                 nowUseLower = sentence[1];
             else {//A하나만으로 이루어져 있는 경우
-                rule = 3;
+                words.push_back(word);
+                sentence.erase(sentence.begin());
                 continue;
             }
-            if (isupper(nowUseLower) || used[nowUseLower-97]) {//이미 사용한 단어이거나, 첫 단어가 대문자 두개로 이루어진 경우, rule = 3;
+
+            if (isupper(nowUseLower)) {//aIa AM에서 AM같은 경우 A 와 M으로 볼 수 있음.
+                words.push_back(string(1, sentence[0]));
+                sentence.erase(sentence.begin());
+                continue;
+            }
+
+            if (used[nowUseLower-97]) {//이미 사용한 단어이면 rule = 3;
                 rule = 3;
                 continue;
             }
             
-            string word = string(1, sentence[0]);
+            
             int end_idx = -1; // 단어의 끝 인덱스
             int upperCount = 1; // 연속된 대문자의 개수
             int lowerCount = 0;
@@ -125,5 +133,5 @@ string solution(string sentence) {
     return answer;
 }
 int main() {
-    cout << solution("xAx") << endl;
+    cout << solution("aIaAM") << endl;
 }
