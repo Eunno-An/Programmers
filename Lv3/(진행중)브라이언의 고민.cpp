@@ -1,106 +1,118 @@
 #include <string>
-#include <iostream>
-#include <stack>
-
+#include <vector>
 using namespace std;
 
 // 전역 변수를 정의할 경우 함수 내에 초기화 코드를 꼭 작성해주세요.
-// abba
-
-// BaKDcDcBcA
-// aBa
-// aBBa
-// 
 string solution(string sentence) {
     string answer = "";
-    //규칙 1: 대문자 사이 사이에 소문자
-    //규칙 2: 소문자가 글자 앞 뒤에 존재함.
-    int rule = (islower(sentence[0]) ? 2 : 1); // 문자열 앞 글자가 소문자 일 경우, 규칙 2일 가능성이 있고, 대문자면 규칙 1일 가능성이 있음. 
+    //대문자 다음에 소문자 -> rule1
+    //소문자 다음에 대문자 -> rule2
+    //대문자 다음에 대문자 -> 이전 단어가 rule1, 그 다음 단어도 rule1
+    //소문자 다음에 소문자 -> 이전 단어가 rule2, 그 다음 단어도 rule2
+    vector<string> words;
+    int rule = (islower(sentence[0]) ? 2 : 1); // 문자열 앞 글자가 대문자 : rule1, 소문자 : rule2 
     bool used[26];
-    char nowUseLower = '\0';
-    
+    char nowUseLower = (rule == 1 ? '\0' : sentence[0]);
     memset(used, false, sizeof(used));
+
     while (!sentence.empty()) {
-        rule = (islower(sentence[0]) ? 2 : 1);
-        if (rule == 1) {
+        if (rule == 1) {//문자열 앞 글자가 대문자로 시작
+            //AA
+            //AbA
+            //Ab
+
+            if (sentence.size() > 1)
+                nowUseLower = sentence[1];
+            else {//A하나만으로 이루어져 있는 경우
+                rule = 3;
+                continue;
+            }
+            if (isupper(nowUseLower) || used[nowUseLower-97]) {//이미 사용한 단어이거나, 첫 단어가 대문자 두개로 이루어진 경우, rule = 3;
+                rule = 3;
+                continue;
+            }
             
-            string pair = "";
-            if (sentence.size() >= 2) {//AxBxC에서 Ax
-                pair = sentence.substr(0, 2);
-                if (islower(pair[1])) {
-                    
-                    
-                    if (nowUseLower == '\0') {
-                        nowUseLower = pair[1];
-                        while (sentence.size() >= 2 && isupper(sentence[0]) && islower(sentence[1])) {
-                            if (nowUseLower != sentence[1])
-                                break;
-                            answer += sentence[0];
-                            sentence.erase(sentence.begin(), sentence.begin() + 2);
-
-                        }
-                        if (sentence.size() >= 2 && nowUseLower != sentence[1]) {
-                            answer += sentence[0];
-                            sentence.erase(sentence.begin());
-                        }
-                    }
-                    else {
-                        if (used[nowUseLower - 97])
-                            return answer = "invalid";
-                        answer += pair[0];
-                        if (nowUseLower == pair[1]) {
-                            sentence.erase(sentence.begin(), sentence.begin() + 2);
-                        }
-                        else {//AxBxCoDFFDo 같은 경우
-                            sentence.erase(sentence.begin());
-                        }
-
-                    }
-                    used[nowUseLower - 97] = 1;
-                }
-                else {//AA같은 경우
-                    
-                }
-            }
-            else {//A혼자 남았을 때
-                answer += to_string(pair[0]);
-            }
-        }
-        else if (rule == 2) {
-            nowUseLower = sentence[0];
-            if (used[nowUseLower - 97]) // 이미 사용한 문자일 경우
-                return answer = "invalid";
-            int idxLower = -1;
+            string word = string(1, sentence[0]);
+            int end_idx = -1; // 단어의 끝 인덱스
+            int upperCount = 1; // 연속된 대문자의 개수
             for (int i = 1; i < sentence.size(); i++) {
-                if (sentence[i] == nowUseLower) {
-                    idxLower = i;
+                if (islower(sentence[i]) && sentence[i] != nowUseLower) {
+                    end_idx = i;
                     break;
                 }
+                else {
+                    if (isupper(sentence[i])) {
+                        if (upperCount == 1) {
+                            end_idx = i;
+                            break;
+                        }
+                        upperCount++;
+                    }
+                    else
+                        upperCount = 0;
+                    word += sentence[i];
+                }
             }
-            if (idxLower == -1)//aBBBBBB로 끝날 경우
-                return answer = "invalid";
-            sentence.erase(sentence.begin());
-            sentence.erase(sentence.begin() + idxLower-1);
-            used[nowUseLower - 97] = 1;
+            words.push_back(word);
+            if (end_idx == -1)//전 단어를 다 집어 넣은 경우
+                break;
+            sentence.erase(sentence.begin(), sentence.begin() + end_idx);
 
-            string temp = "";
-            for (int i = 0; i < sentence.size(); i++) {
-                if (isupper(sentence[i]))
-                    temp += sentence[i];
-            }
-            if (temp.size() == sentence.size()) {
-                answer += temp;
-                sentence.clear();
-            }
         }
+        else if(rule == 2){//문자열 앞 글자가 소문자로 시작
+            //aB
+            //aBa
+            //aBac
+            //aBaC
+            nowUseLower = sentence[0];
+            
+            if (sentence.size() == 1 || used[nowUseLower]) {//소문자 하나로만 이루어져 있는 경우, 또는 이미 사용한 소문자일 경우
+                rule = 3;
+                continue;
+            }
+            string word = string(1, nowUseLower);
+            int end_idx = -1;
+            for (int i = 1; i < sentence.size(); i++) {
+                if (islower(sentence[i])) {
+                    end_idx = i;
+                    break;
+                }
+                else 
+                    word += sentence[i];
+            }
+            
+            if (end_idx == -1 || sentence[end_idx] != nowUseLower) {//aBBBBb 또는 aBBBBB
+                rule = 3;
+                continue;
+            }
+            
+            word += nowUseLower;
+            sentence.erase(sentence.begin(), sentence.begin() + end_idx + 1);
+            words.push_back(word);
+        }
+        else //규칙에 맞지 않는 경우
+            return "invalid";
+
+        if (sentence.empty())
+            break;
+        
+        rule = (islower(sentence[0]) ? 2 : 1);
+        used[nowUseLower - 97] = 1;
     }
+    for (int i = 0; i < words.size(); i++) {
+        string temp = "";
+        for (int j = 0; j < words[i].size(); j++) 
+            if (isupper(words[i][j]))
+                temp += words[i][j];
+        answer += temp;
+        answer += ' ';
 
-
+    }
+    answer.pop_back();
     return answer;
 }
 int main() {
-    
-    cout << solution("HaEaLaLaObWORLDb") << '\n';
-    cout << solution("SpIpGpOpNpGJqOqA") << '\n';
-    cout << solution("AxAxAxAoBoBoB") << '\n';
+    solution("HaEaLaLaObWORLDb");
+    solution("SpIpGpOpNpGJqOqA");
+    solution("AxAxAxAoBoBoB");
 }
