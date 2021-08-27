@@ -13,6 +13,11 @@ lv2 얼마 안남았다!
 </p>
 
 [못한 날들에 대한 변명들..?](https://github.com/Eunno-An/Programmers/blob/main/%EB%AA%BB%ED%95%9C%20%EB%82%A0%EB%93%A4...!)
+
+<details>
+<summary>Lv 1</summary>
+<div markdown="1">
+
 ### [Lv 1]
 |문제|링크|코드| 
 |:---|:---:|---:| 
@@ -49,6 +54,9 @@ lv2 얼마 안남았다!
 |제일 작은 수 제거하기|[제일 작은 수 제거하기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12935)|[제일 작은 수 제거하기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EC%A0%9C%EC%9D%BC%20%EC%9E%91%EC%9D%80%20%EC%88%98%20%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0.cpp)|
 |짝수와 홀수|[짝수와 홀수 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12937)|[짝수와 홀수 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EC%A7%9D%EC%88%98%EC%99%80%20%ED%99%80%EC%88%98.cpp)|
 |최대 공약수와 최소 공배수|[최대 공약수와 최소 공배수 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12940)|[최대 공약수와 최소 공배수 문제 풀이](https://programmers.co.kr/learn/courses/30/lessons/12940)|
+</div>
+</details>
+
 
 ### [Lv 2]
 |문제|링크|코드| 
