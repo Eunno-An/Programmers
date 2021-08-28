@@ -121,3 +121,4 @@ lv3 깨부순다..
 |등굣길|[등굣길 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42898)|[등굣길 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%E2%98%85%EB%93%B1%EA%B5%A3%EA%B8%B8.cpp)|
 |이중 우선순위 큐|[이중 우선순위 큐 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42628#)|[이중 우선순위 큐 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%E2%98%85%EC%9D%B4%EC%A4%91%20%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84%20%ED%81%90.cpp)|
 |2*n 타일링|[2*n 타일링 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12900)|[2*n 타일링 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%E2%98%852*n%20%ED%83%80%EC%9D%BC%EB%A7%81.cpp)|
+|표 편집|[표 편집 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/81303)|[표 편집 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%E2%98%85%E2%98%85%E2%98%85%ED%91%9C%20%ED%8E%B8%EC%A7%91.cpp)|
