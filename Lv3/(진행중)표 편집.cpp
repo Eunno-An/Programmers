@@ -1,67 +1,105 @@
-//흠.... 이게 진짜 말도 안되.......!
+//★★★list의 erase, deque의 erase는 O(n)타임이 걸린다! 특히 리스트는 내 생각으로는.. 상수 타임이 될 줄 알았는데... 그게 아니라서 ... 좀 놀랐음.
+//linkedlist는 복원 명령과 찰떡이다!! 그렇지 않다고 생각할 수 있겠지만.. 소름돋았다.
 #include <string>
 #include <vector>
 #include <stack>
-#include <deque>
 using namespace std;
-
 int arr[1000001];
-string solution(int n, int k, vector<string> cmd) {
-    string answer = "";
-    stack<int> stack_erase;
-    deque<int> chart;
-    int now_idx = k;
+class Node {
+public:
+    Node(int v) { value = v; }
+    int value;
+    Node* next;
+    Node* prev;
 
-    for (int i = 0; i < n; i++)
-        chart.push_back(i);
-
-    for (int i = 0; i < cmd.size(); i++) {
-        if (cmd[i][0] == 'U') {
-            int X = stoi(cmd[i].substr(2, cmd[i].size() - 2));
-            k -= X;
-            if (k < 0)
-                k = 0;
-        }
-        else if (cmd[i][0] == 'D') {
-            int X = stoi(cmd[i].substr(2, cmd[i].size() - 2));
-            k += X;
-            if (k > chart.size() - 1)
-                k = chart.size() - 1;
-        }
-        else if (cmd[i] == "C") {
-            if (chart.empty())
-                continue;
-            int temp_k = k;
-            if (k == chart.size() - 1)//삭제된 행이 가장 마지막 행인 경우
-                k--;
-            stack_erase.push(chart[temp_k]);
-            chart.erase(chart.begin() + temp_k);
-            
+};
+class LinkedList {
+public:
+    Node* head;
+    Node* tail;
+    LinkedList() {
+        head = NULL;
+        tail = NULL;
+    }
+    void addNode(Node* node) {
+        node->next = NULL;
+        if (head == NULL) {
+            node->prev = NULL;
+            head = node;
+            tail = node;
         }
         else {
-            int redo = stack_erase.top();
-            stack_erase.pop();
-            auto idx = lower_bound(chart.begin(), chart.end(), redo);
-            deque<int>::iterator it = chart.begin() + k;
-            if (idx <= it)
-                k++;
-            chart.insert(idx, redo);
+            tail->next = node;
+            node->prev = tail;
+            tail = node;
         }
     }
-
-    while (!stack_erase.empty()) {
-        arr[stack_erase.top()] = 1;
-        stack_erase.pop();
+    Node* getNextNode(Node* node) {
+        return node->next;
+    }
+    Node* getPrevNode(Node* node) {
+        return node->prev;
+    }
+};
+string solution(int n, int k, vector<string> cmd) {
+    string answer = "";
+    stack<Node*> erased;
+    LinkedList linkedList;
+    for (int i = 0; i < n; i++) {
+        Node* node = new Node(i);
+        linkedList.addNode(node);
+    }
+    Node* nowNode = linkedList.head;
+    for (int i = 0; i < k; i++)
+        nowNode = nowNode->next;
+    for (int i = 0; i < cmd.size(); i++) {
+        if (cmd[i] == "C") {//현재 선택된 행 삭제, 바로 아래 행 선택.
+            erased.push(nowNode);
+            if (nowNode->prev == NULL && nowNode->next == NULL) {
+                nowNode = NULL;
+                continue;
+            }
+            if (nowNode->next == NULL && nowNode->prev != NULL) {
+                nowNode->prev->next = NULL;
+                nowNode = nowNode->prev;
+                continue;
+            }
+            nowNode->prev->next = nowNode->next;
+            nowNode->next->prev = nowNode->prev;
+            
+            
+        }
+        else if (cmd[i] == "Z") {//
+            Node* recur = erased.top();
+            erased.pop();
+            recur->prev->next = recur;
+            recur->next->prev = recur;
+        }
+        else {
+            int X = stoi(cmd[i].substr(2, cmd[i].size() - 2));
+            if (cmd[i][0] == 'U') {
+                while (X--) 
+                    nowNode = nowNode->prev;
+                
+            }
+            else {
+                while (X--)
+                    nowNode = nowNode->next;
+            }
+        }
+    }
+    while (!erased.empty()) {
+        int num = erased.top()->value;
+        erased.pop();
+        arr[num] = 1;
     }
     for (int i = 0; i < n; i++)
         if (arr[i] == 1)
             answer.push_back('X');
         else
             answer.push_back('O');
-
-
     return answer;
 }
 int main() {
-    solution(8, 2, { "D 2", "C", "U 3", "C", "D 4", "C", "U 2", "Z", "Z" });
+    solution(8, 2, { "D 2","C","U 3","C","D 4","C","U 2","Z","Z","U 1","C" });
 }
