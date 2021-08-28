@@ -1,5 +1,6 @@
 //★★★list의 erase, deque의 erase는 O(n)타임이 걸린다! 특히 리스트는 내 생각으로는.. 상수 타임이 될 줄 알았는데... 그게 아니라서 ... 좀 놀랐음.
 //linkedlist는 복원 명령과 찰떡이다!! 그렇지 않다고 생각할 수 있겠지만.. 소름돋았다.
+//NULL 에러 잡기
 #include <string>
 #include <vector>
 #include <stack>
