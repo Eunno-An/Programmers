@@ -2,10 +2,12 @@
 #include <vector>
 #include <map>
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 int solution(vector<string> user_id, vector<string> banned_id) {
     int answer = 0;
+    
     vector<vector<string>> users;
     users.resize(8);
     vector<vector<string>> list;
@@ -36,12 +38,22 @@ int solution(vector<string> user_id, vector<string> banned_id) {
             userID = temp;
         }
     }
+    map<string, int> m;
+    for(int i=0; i<list.size(); i++){
+        vector<string> temp;
+        for(int j=0; j<list[i].size(); j++){
+            if(m.find(list[i][j]) == m.end()){
+                m.insert(make_pair(list[i][j], 1));
+                temp.push_back(list[i][j]);
+            }
+        }
+        list[i] = temp;
+    }
     for(int i=0; i<list.size(); i++){
         for(int j=0; j<list[i].size(); j++)
             cout << list[i][j] << ' ';
         cout << '\n';
     }
-    
     
     return answer;
 }
