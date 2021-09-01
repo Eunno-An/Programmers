@@ -122,3 +122,4 @@ lv3 깨부순다.. 보석쇼핑 왜이렇게 안되는거야,,.,.
 |이중 우선순위 큐|[이중 우선순위 큐 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42628#)|[이중 우선순위 큐 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%E2%98%85%EC%9D%B4%EC%A4%91%20%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84%20%ED%81%90.cpp)|
 |2*n 타일링|[2*n 타일링 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12900)|[2*n 타일링 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%E2%98%852*n%20%ED%83%80%EC%9D%BC%EB%A7%81.cpp)|
 |표 편집|[표 편집 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/81303)|[표 편집 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%E2%98%85%E2%98%85%E2%98%85%ED%91%9C%20%ED%8E%B8%EC%A7%91.cpp)|
+|보석쇼핑|[보석쇼핑 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/67258)|[보석쇼핑 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%E2%98%85%E2%98%85%EB%B3%B4%EC%84%9D%20%EC%87%BC%ED%95%91.cpp)|
