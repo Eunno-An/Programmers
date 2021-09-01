@@ -1,3 +1,5 @@
+//FAIL
+//투포인터로 풀어볼 것.
 #include <string>
 #include <vector>
 #include <iostream>
