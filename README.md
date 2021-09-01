@@ -6,7 +6,7 @@
 
 
 
-lv3 깨부순다..
+lv3 깨부순다.. 보석쇼핑 왜이렇게 안되는거야,,.,.
 </p>
 
 [못한 날들에 대한 변명들..?](https://github.com/Eunno-An/Programmers/blob/main/%EB%AA%BB%ED%95%9C%20%EB%82%A0%EB%93%A4...!)
