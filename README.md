@@ -125,3 +125,4 @@ lv3 깨부순다..
 |2*n 타일링|[2*n 타일링 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12900)|[2*n 타일링 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%E2%98%852*n%20%ED%83%80%EC%9D%BC%EB%A7%81.cpp)|
 |표 편집|[표 편집 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/81303)|[표 편집 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%E2%98%85%E2%98%85%E2%98%85%ED%91%9C%20%ED%8E%B8%EC%A7%91.cpp)|
 |보석쇼핑|[보석쇼핑 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/67258)|[보석쇼핑 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%E2%98%85%E2%98%85%EB%B3%B4%EC%84%9D%20%EC%87%BC%ED%95%91.cpp)|
+|N-Queen|[N-Queen 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12952)|[N-Queen 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/N-Queen.cpp)|
