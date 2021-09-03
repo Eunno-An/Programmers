@@ -6,7 +6,9 @@
 
 
 
-lv3 깨부순다.. 보석쇼핑 왜이렇게 안되는거야,,.,.
+lv3 깨부순다..
+종만북 1권 완료(21 09)
+종만북 2권 바로 시작
 </p>
 
 [못한 날들에 대한 변명들..?](https://github.com/Eunno-An/Programmers/blob/main/%EB%AA%BB%ED%95%9C%20%EB%82%A0%EB%93%A4...!)
