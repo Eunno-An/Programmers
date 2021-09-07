@@ -11,6 +11,7 @@ lv3 깨부순다..
 종만북 2권 바로 시작
 아이고 피곤해..요번주 훈련만버티면 휴가인것이여..
 훈련힘드러.
+빨리 탈출해야지..ㅋ
 </p>
 
 [못한 날들에 대한 변명들..?](https://github.com/Eunno-An/Programmers/blob/main/%EB%AA%BB%ED%95%9C%20%EB%82%A0%EB%93%A4...!)
