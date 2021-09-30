@@ -133,3 +133,4 @@ lv3 깨부순다..
 |N-Queen|[N-Queen 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12952)|[N-Queen 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/N-Queen.cpp)|
 |하노이의 탑|[하노이의 탑 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12946#)|[하노이의 탑 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/(%EC%A7%84%ED%96%89%EC%A4%91)%ED%95%98%EB%85%B8%EC%9D%B4%EC%9D%98%20%ED%83%91.cpp)|
 |최고의 집합|[최고의 집합 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12938#)|[최고의 집합 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%E2%98%85%EC%B5%9C%EA%B3%A0%EC%9D%98%20%EC%A7%91%ED%95%A9.cpp)|
+|가장 먼 노드|[가장 먼 노드 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/49189)|[가장 먼 노드 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%E2%98%85%EA%B0%80%EC%9E%A5%20%EB%A8%BC%20%EB%85%B8%EB%93%9C.cpp)|
