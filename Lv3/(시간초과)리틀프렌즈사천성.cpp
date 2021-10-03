@@ -1,5 +1,7 @@
 //fail
-//다음엔 BFS로 짜보자. DFS는 너무 헷갈려... 진짜로
+//시간초과
+//너무 중복된 것을 많이 구함.
+//
 #include <string>
 #include <vector>
 #include <algorithm>
@@ -28,7 +30,7 @@ void init_visit(vector<string> board) {
 
 }
 bool ok(vector<string> board, int y, int x) {
-    return (y >= 0 && y < board.size() && x >= 0 && x < board.size()) ? true : false;
+    return (y >= 0 && y < board.size() && x >= 0 && x < board[0].size()) ? true : false;
 }
 bool ok2(vector<string> board, char tile, int y, int x) {
     return ((isupper(board[y][x]) && board[y][x] == tile) || board[y][x] == '.') ? true : false;
@@ -70,7 +72,7 @@ pair<int, int> findPair_pos(vector<string> board, char tile, int y, int x, int d
     visit[y][x] = false;
     return ret;
 }
-void function(vector<string> board, string ret) {
+void gameStart(vector<string> board, string ret) {
     if (ret.size() == numUpper) {
         result.push_back(ret);
         return;
@@ -89,7 +91,7 @@ void function(vector<string> board, string ret) {
                                 continue;
                             board[i][j] = '.';
                             board[other.first][other.second] = '.';
-                            function(board, ret + opposeTile);
+                            gameStart(board, ret + opposeTile);
                             board[i][j] = opposeTile;
                             board[other.first][other.second] = opposeTile;
                             continue;
@@ -108,7 +110,7 @@ string solution(int m, int n, vector<string> board) {
     string answer = "";
     init_visit(board);
     checkUppers(board);
-    function(board, "");
+    gameStart(board, "");
     vector<string> result2;
     for (int i = 0; i < result.size(); i++) {
         if (result[i].size() == numUpper)
@@ -123,7 +125,7 @@ string solution(int m, int n, vector<string> board) {
 }
 
 int main() {
-    cout << solution(2, 4, { "NRYN", "ARYA" }) << endl;
+    cout << solution(3, 3, { "DBA", "C*A", "CDB" }) << endl;
     /*
     DBA
     C*A
