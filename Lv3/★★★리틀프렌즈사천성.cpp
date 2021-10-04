@@ -17,6 +17,7 @@
 //만약 C를 찾으면 C를 queue에서 지운다. 이 때, 나머지 queue에 있는 요소들을 정렬!해야 한다.
 //왜냐하면 우리는 사전순으로 가장 빠른 탐색 순서를 찾을 것이기 때문이다.
 #include <string>
+#include <cstring>
 #include <vector>
 #include <queue>
 #include <deque>
@@ -26,49 +27,6 @@ using namespace std;
 
 // 전역 변수를 정의할 경우 함수 내에 초기화 코드를 꼭 작성해주세요.
 //https://blog.naver.com/jms8732/221750426953
-
-int uppers[26];
-int dy[4] = { 1, 0, -1, 0 };
-int dx[4] = { 0, 1, 0, -1 };
-
-void init(int m, int n) {
-
-
-}
-void checkUppers(vector<string> board) {
-
-}
-bool ok(vector<string> board, int y, int x) {
-    return (y >= 0 && y < board.size() && x >= 0 && x < board[0].size()) ? true : false;
-}
-bool ok2(vector<string> board, char tile, int y, int x) {
-    return ((isupper(board[y][x]) && board[y][x] == tile) || board[y][x] == '.') ? true : false;
-}
-bool matching(vector<vector<bool>>& visit, vector<string>& board, char tile, int y, int x, int direction, int turn) {
-    if (visit[y][x])
-        return false;
-    if (board[y][x] == tile) {
-        board[y][x] = '.';
-        return true;
-    }
-
-    visit[y][x] = true;
-    bool ret = false;
-    for (int i = 0; i < 4; i++) {
-        int ny = y + dy[i];
-        int nx = x + dx[i];
-        if (ok(board, ny, nx) && ok2(board, tile, ny, nx)) {
-            if (direction != i && turn < 1)
-                ret = matching(visit, board, tile, ny, nx, i, turn + 1);
-            else if (direction == i && turn <= 1)
-                ret = matching(visit, board, tile, ny, nx, direction, turn);
-        }
-        if (ret)
-            break;
-    }
-    visit[y][x] = false;
-    return ret;
-}
 
 bool find_right_straight(vector<string>& board, int y, int x) {
     for (int i = x+1; i < board[0].size(); i++) {
@@ -159,7 +117,7 @@ bool find_right_down(vector<string>& board, int y, int x) {
     return false;
     
 }
-string gamePlaying(vector<string>& board, vector<vector<bool>>& visit, deque<char> queue_uppers) {
+string gamePlaying(vector<string>& board, deque<char> queue_uppers) {
     string ret = "";
     int count_loop = 0;
     while (!queue_uppers.empty()) {
@@ -188,7 +146,7 @@ string gamePlaying(vector<string>& board, vector<vector<bool>>& visit, deque<cha
             if (check)
                 break;
         }
-        if(!find) {
+        if(!find) {//못 찾은 경우
             count_loop++;
             queue_uppers.push_back(firstUpper);
         }
@@ -203,30 +161,22 @@ string gamePlaying(vector<string>& board, vector<vector<bool>>& visit, deque<cha
 
 string solution(int m, int n, vector<string> board) {
     string answer = "";
-    vector<vector<bool>> visit;
-    vector<char> vec_uppers;
     deque<char> queue_uppers;
-    visit.resize(m);
-    for (int i = 0; i < m; i++)
-        visit[i].resize(n, false);
-    for (int i = 0; i < 26; i++)
-        uppers[i] = 0;
-    for (int i = 0; i < board.size(); i++) {
-        for (int j = 0; j < board[i].size(); j++) {
-            if (isupper(board[i][j]) && uppers[board[i][j] - 'A'] == 0) {
+
+    int uppers[26];
+    memset(uppers, 0, sizeof(uppers));
+
+    for (int i = 0; i < board.size(); i++) 
+        for (int j = 0; j < board[i].size(); j++) 
+            if (isupper(board[i][j]) && uppers[board[i][j] - 'A'] == 0) 
                 uppers[board[i][j] - 'A']++;
-            }
-        }
-    }
+            
+        
+  
     for (int i = 0; i < 26; i++)
         if (uppers[i])
-            vec_uppers.push_back('A' + i);
-
-    for (int i = 0; i < vec_uppers.size(); i++)
-        queue_uppers.push_back(vec_uppers[i]);
-
-    checkUppers(board);
-    answer = gamePlaying(board, visit, queue_uppers);
+            queue_uppers.push_back('A' + i);
+    answer = gamePlaying(board, queue_uppers);
     return answer;
 }
 int main() {
