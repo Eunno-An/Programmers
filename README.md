@@ -135,3 +135,5 @@ lv3 깨부순다..
 |최고의 집합|[최고의 집합 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12938#)|[최고의 집합 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%E2%98%85%EC%B5%9C%EA%B3%A0%EC%9D%98%20%EC%A7%91%ED%95%A9.cpp)|
 |가장 먼 노드|[가장 먼 노드 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/49189)|[가장 먼 노드 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%E2%98%85%EA%B0%80%EC%9E%A5%20%EB%A8%BC%20%EB%85%B8%EB%93%9C.cpp)|
 |리틀 프렌즈 사천성|[리틀 프렌즈 사천성 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/1836)|[리틀 프렌즈 사천성 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/★★★리틀프렌즈사천성.cpp)|
+|순위|[순위 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/49191)|[순위 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/★순위.cpp)|
+|다단계 칫솔 판매|[다단계 칫솔 판매 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/77486)|[다단계 칫솔 판매 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/다단계%20칫솔%20판매.cpp)|
