@@ -1,3 +1,8 @@
+//fail
+//1. 플로이드 와샬로 푸는 방법
+//2. 단순 구현 문제(dfs)
+//푼 방법은 후자로 하였으며, 아이디어를 참고하였음(https://blog.naver.com/gmlwo308/222180287358)
+//쉬운 문제였으나,, 접근 다 해놓고 생각을 좀 더 깊게 하지 못했음.
 #include <string>
 #include <vector>
 #include <cstring>
@@ -31,6 +36,8 @@ int solution(int n, vector<vector<int>> results) {
         }
         
     }
+    vector<bool> init;
+    init.resize(101, false);
     vector<bool> visitA, visitB;
     visitA.resize(101, false);
     visitB.resize(101, false);
@@ -46,6 +53,8 @@ int solution(int n, vector<vector<int>> results) {
         int b = dfs(graphB, visitB, i, n);
         if (a + b == n - 1)
             answer++;
+        visitA = init;
+        visitB = init;
     }
         
 
