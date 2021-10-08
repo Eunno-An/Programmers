@@ -43,11 +43,12 @@ Crew* getConArriveTime(vector<Bus*> buses, vector<Crew*> crews, int n, int t, in
             break;
         int HH = crews[i]->HH;
         int MM = crews[i]->MM;
-        if(HH <=lastBus->HH && MM <= lastBus->MM)
+        if(HH < lastBus->HH || (HH == lastBus->HH && MM <= lastBus->MM))
             waiting.push_back(crews[i]);
         else//이 이상은 이미 버스가 떠난것!
             break;
     }
+    cout << waiting.size() << ' ';
     if(waiting.empty()){
         Con->HH = lastBus->HH;
         Con->MM = lastBus->MM;
@@ -58,6 +59,7 @@ Crew* getConArriveTime(vector<Bus*> buses, vector<Crew*> crews, int n, int t, in
         Con->MM = lastBus->MM;
     }
     else{
+        
         Con->HH = waiting.back()->HH;
         Con->MM = waiting.back()->MM - 1;
         if(Con->MM == -1){
