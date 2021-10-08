@@ -48,6 +48,11 @@ Crew* getConArriveTime(vector<Bus*> buses, vector<Crew*> crews, int n, int t, in
         else//이 이상은 이미 버스가 떠난것!
             break;
     }
+    if(waiting.empty()){
+        Con->HH = lastBus->HH;
+        Con->MM = lastBus->MM;
+        return Con;
+    }
     if(maximum_crew > waiting.size()){
         Con->HH = lastBus->HH;
         Con->MM = lastBus->MM;
