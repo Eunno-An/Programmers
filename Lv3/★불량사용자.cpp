@@ -5,7 +5,7 @@
 #include <algorithm>
 #include <iostream>
 using namespace std;
-set<set<string>> Bullys;
+
 void print_dict_bully_Info(map<string, set<string>> dict_bully){
     for(auto it : dict_bully){
         for(auto it2 : dict_bully[it.first])
@@ -21,22 +21,21 @@ bool customCompare(string a, string b){//a가 userId, b가 bullyUserId
             return false;
     return true;
 }
-void get_number_of_cases_list(vector<string> banned_id, int idx, map<string, set<string>> dict_bully, set<string> tempBullys){
+void get_number_of_cases_list(vector<string> banned_id, int idx, map<string, set<string>> dict_bully, set<string> tempBullys, set<set<string>>& Bullys){
     if(idx == banned_id.size()){
         Bullys.insert(tempBullys);
         return ;
     }
-    for(int i=idx; i<banned_id.size(); i++){
-        string temp = banned_id[i];
-        //dict_bully[temp]에서 하나를 tempBullys에 넣고 잠시 지운다.
-        for(auto it : dict_bully[temp]){
-            tempBullys.insert(it);
-            dict_bully[temp].erase(dict_bully[temp].find(it));
-            get_number_of_cases_list(banned_id, idx+1, dict_bully, tempBullys);
-            dict_bully[temp].insert(temp);
-            tempBullys.erase(tempBullys.find(temp));
-        }
+    
+    for(auto it : dict_bully[banned_id[idx]]){
+        string tempUser = it;
+        if(tempBullys.find(it) != tempBullys.end())
+            continue;
+        tempBullys.insert(it);
+        get_number_of_cases_list(banned_id, idx+1, dict_bully, tempBullys, Bullys);
+        tempBullys.erase(tempBullys.find(tempUser));
     }
+    
     return ;
 }
 int solution(vector<string> user_id, vector<string> banned_id) {
@@ -57,10 +56,16 @@ int solution(vector<string> user_id, vector<string> banned_id) {
             }
         }
     }
+    set<set<string>> Bullys;
     set<string> tempBullys;
-    get_number_of_cases_list(banned_id, 0, dict_bully, tempBullys);
+    get_number_of_cases_list(banned_id, 0, dict_bully, tempBullys, Bullys);
     
+    for(auto it : Bullys)
+        if(it.size() == banned_id.size())
+            answer++;
     
-    
-    return answer=Bullys.size();
+    return answer;
+}
+int main(){
+    solution({"frodo", "fradi", "crodo", "abc123", "frodoc"}, {"*rodo", "*rodo", "******"});
 }
