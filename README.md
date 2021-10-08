@@ -138,3 +138,4 @@ lv3 깨부순다..
 |리틀 프렌즈 사천성|[리틀 프렌즈 사천성 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/1836)|[리틀 프렌즈 사천성 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/★★★리틀프렌즈사천성.cpp)|
 |순위|[순위 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/49191)|[순위 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/★순위.cpp)|
 |다단계 칫솔 판매|[다단계 칫솔 판매 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/77486)|[다단계 칫솔 판매 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/다단계%20칫솔%20판매.cpp)|
+|불량 사용자|[불량 사용자 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/64064)|[불량 사용자 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%E2%98%85%EB%B6%88%EB%9F%89%EC%82%AC%EC%9A%A9%EC%9E%90.cpp)|
