@@ -139,3 +139,4 @@ lv3 깨부순다..
 |순위|[순위 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/49191)|[순위 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/★순위.cpp)|
 |다단계 칫솔 판매|[다단계 칫솔 판매 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/77486)|[다단계 칫솔 판매 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/다단계%20칫솔%20판매.cpp)|
 |불량 사용자|[불량 사용자 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/64064)|[불량 사용자 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%E2%98%85%EB%B6%88%EB%9F%89%EC%82%AC%EC%9A%A9%EC%9E%90.cpp)|
+|[1차]셔틀버스|[[1차]셔틀버스 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/17678)|[[1차]셔틀버스 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/★★★%5B1차%5D%20셔틀버스.cpp)|
