@@ -54,6 +54,9 @@ bool checkSquare(vector<vector<int>> square, vector<vector<int>> key, int y, int
         for (int j = 0; j < square_x; j++) {
             if (square[i][j] != key[i + y][j + x])
                 return false;
+            if (square[i][j] == 1 && key[i+y][j+x] == 0){ //둘 다 돌기일 경우
+                return false;
+            }
         }
     return true;
 }
