@@ -15,6 +15,7 @@ lv3 깨부순다..
 휴가시작!
 21.09.30 다시 시작
 요즘 잘풀림 ㅋㅋ
+안드를 이제 슬슬 깔아보자. 코틀린도 배워보게
 </p>
 
 [못한 날들에 대한 변명들..?](https://github.com/Eunno-An/Programmers/blob/main/%EB%AA%BB%ED%95%9C%20%EB%82%A0%EB%93%A4...!)
