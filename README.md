@@ -16,6 +16,7 @@ lv3 깨부순다..
 21.09.30 다시 시작
 요즘 잘풀림 ㅋㅋ
 안드를 이제 슬슬 깔아보자. 코틀린도 배워보게
+안드까는데 한종일 다걸리겠네 ㅋㅋ
 </p>
 
 [못한 날들에 대한 변명들..?](https://github.com/Eunno-An/Programmers/blob/main/%EB%AA%BB%ED%95%9C%20%EB%82%A0%EB%93%A4...!)
