@@ -27,7 +27,7 @@ public:
 //-64 % 6 != 0.
 //어느 한 좌표라도 정수가 아니면 pass
 long long gcd(long long a, long long b) {
-    if (a == b) return 1;
+    if (b == 0) return 1;
     return gcd(b, a % b);
 }
 long long lca(long long a, long long b) {
@@ -37,6 +37,11 @@ pair<long long, long long> get_Intersection_Point(Line* l1, Line* l2) {
     pair<long long, long long> ret;
     ret.first = MAX;
     ret.second = MAX;
+    if (l1->coX == 0 && l2->coX == 0) 
+        return ret;
+    if (l1->coY == 0 && l2->coY == 0)
+        return ret;
+
     if (l1->coX == 0 || l2->coX == 0) {
         //둘 중에 어떤건 y = k꼴임. k가 정수가 아니라면 넘어가면 됨.
         long long checkY = (l1->c % (l1->coY * -1));
@@ -62,9 +67,7 @@ pair<long long, long long> get_Intersection_Point(Line* l1, Line* l2) {
                 ret.first = (l1->coY * ret.second * -1 - l1->c) / l1->coX;
             }
         }
-        else {//둘다 0이면 평행함.
-            return ret;
-        }
+        
     }
     else if (l1->coY == 0 || l2->coY == 0) {
         long long checkX = (l1->c % (l1->coX * -1));
@@ -90,9 +93,7 @@ pair<long long, long long> get_Intersection_Point(Line* l1, Line* l2) {
                 ret.first = (l1->coX * ret.second * -1 - l1->c) / l1->coY;
             }
         }
-        else {
-            return ret;
-        }
+       
     }
     else {//둘 다 0이 아닌 경우. 둘 다 0인 경우는 없다.
         long long lcaY = lca(l1->coY, l2->coY);//Y의 최소공배수 구한다.
