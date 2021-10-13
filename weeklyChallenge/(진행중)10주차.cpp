@@ -1,3 +1,4 @@
+//1시간 20분 소요중.. answer에 대해서 어떻게 할 지 생각해보자. 여기서 세그먼트 오류나니까.
 #include <string>
 #include <vector>
 
