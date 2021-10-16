@@ -62,6 +62,9 @@ lv3 깨부순다..
 |제일 작은 수 제거하기|[제일 작은 수 제거하기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12935)|[제일 작은 수 제거하기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EC%A0%9C%EC%9D%BC%20%EC%9E%91%EC%9D%80%20%EC%88%98%20%EC%A0%9C%EA%B1%B0%ED%95%98%EA%B8%B0.cpp)|
 |짝수와 홀수|[짝수와 홀수 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12937)|[짝수와 홀수 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/%EC%A7%9D%EC%88%98%EC%99%80%20%ED%99%80%EC%88%98.cpp)|
 |최대 공약수와 최소 공배수|[최대 공약수와 최소 공배수 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12940)|[최대 공약수와 최소 공배수 문제 풀이](https://programmers.co.kr/learn/courses/30/lessons/12940)|
+|나머지가 1이 되는 수 찾기|[나머지가 1이 되는 수 찾기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/87389)|[나머지가 1이 되는 수 찾기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/나머지가%201이%20되는%20수%20찾기.cpp)|
+|나누어 떨어지는 숫자 배열|[나누어 떨어지는 숫자 배열 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12910)|[나누어 떨어지는 숫자 배열 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv1/나누어%20떨어지는%20숫자%20배열.cpp)|
+  
 </div>
 </details>
 
