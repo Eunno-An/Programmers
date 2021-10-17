@@ -120,7 +120,7 @@ lv3 깨부순다..
 |다리를 지나는 트럭|[다리를 지나는 트럭 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42583)|[다리를 지나는 트럭 문제 풀이](https://github.com/Eunno-An/Programmers/tree/main/Lv2)|
 |숫자의 표현|[숫자의 표현 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12924)|[숫자의 표현 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/%EC%88%AB%EC%9E%90%EC%9D%98%20%ED%91%9C%ED%98%84.cpp)|
 |예상 대진표|[예상 대진표 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12985#)|[예상 대진표 문제 풀이](https://github.com/Eunno-An/Programmers/tree/main/Lv2)|
-|예상 대진표|[예상 대진표 문제 링크]https://programmers.co.kr/learn/courses/30/lessons/87390)|[예상 대진표 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/★★n%5E2배열%20자르기.cpp)|
+|n^2배열 자르기|[n^2배열 자르기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/87390)|[n^2배열 자르기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv2/★★n%5E2배열%20자르기.cpp)|
 
 </div>
 </details>
