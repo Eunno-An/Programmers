@@ -12,7 +12,7 @@ https://blog.naver.com/paula23/222167420683
 [못한 날들에 대한 변명들..?](https://github.com/Eunno-An/Programmers/blob/main/%EB%AA%BB%ED%95%9C%20%EB%82%A0%EB%93%A4...!)
 
 <details>
-<summary>Lv 1</summary>
+<summary>Lv 1😋</summary>
 <div markdown="1">
 
 ### [Lv 1]
@@ -58,7 +58,7 @@ https://blog.naver.com/paula23/222167420683
 </details>
 
 <details>
-<summary>Lv 2</summary>
+<summary>Lv 2🙂</summary>
 <div markdown="1">
 
 ### [Lv 2]
