@@ -1,3 +1,6 @@
+//좌표 압축이 아닌, 좌표 확장!!!
+//왜냐하면 좌표 확장을 안하면 ㄴ인지 ㅁ인지 모름. 그럴 경우 dfs를 돌리면 이상한 경로로 가게 됨.
+//따라서 모든걸 두 배 한 다음에 답을 2로 나누면 됨!
 #include <string>
 #include <vector>
 #include <cstring>
@@ -9,10 +12,9 @@ bool ok(int y, int x) {
 	return (y >= 0 && y < 102 && x >= 0 && x < 102) ? true : false;
 }
 int findMaxResult(int terrain[102][102], vector<vector<bool>> visit, pair<int, int> character, pair<int, int> item, int length) {
-	if (character == item) {
-
+	if (character == item) 
 		return length;
-	}
+	
 	int ret = 1000000;
 	visit[character.first][character.second] = true;
 	for (int i = 0; i < 4; i++) {
@@ -73,14 +75,14 @@ int solution(vector<vector<int>> rectangle, int characterX, int characterY, int 
 			if (terrain[i][j] != 2)
 				terrain[i][j] = 0;
 	pair<int, int> character;
-	character.first = characterY;
-	character.second = characterX;
+	character.first = characterY * 2;
+	character.second = characterX * 2;
 	pair<int, int> item;
-	item.first = itemY;
-	item.second = itemX;
+	item.first = itemY * 2;
+	item.second = itemX * 2;
 
 	//terrain은 
-	return answer = findMaxResult(terrain, visit, character, item, 0);
+	return answer = findMaxResult(terrain, visit, character, item, 0) / 2;
 }
 int main() {
 	solution({ {1, 1, 7, 4},{3, 2, 5, 5},{4, 3, 6, 9},{2, 6, 8, 8} }, 1, 3, 7, 8);
