@@ -1,3 +1,5 @@
+//10.19 진행중
+//아직 도형에 대해서 제대로 만들지 못함. 테두리 처리를 잘 해줘야 함. 
 #include <string>
 #include <vector>
 #include <cstring>
