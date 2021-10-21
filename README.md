@@ -1,8 +1,8 @@
-# Programmer🕊
+# Programmers🕊
 
 
 🦅천리길도~ 한 걸음부터~🐌
-힘드러힘드러
+
 
 내년 2~3월 부터 프로그래머스와 백준으로 어떻게 공부하면 좋을지에 대한 글 
 https://blog.naver.com/paula23/222167420683
