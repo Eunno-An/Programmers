@@ -1,3 +1,4 @@
+//dfs로 풀면 안되고,, bfs로 풀어보자 !!
 #include <string>
 #include <vector>
 #include <cstring>
@@ -29,7 +30,7 @@ int dfs(vector<vector<int>> board, vector<vector<bool>> visit, pair<int, int> go
         }
     }
     visit[now.first][now.second] = false;
-    return ret;
+    return ret; 
 }
 int solution(vector<vector<int>> board) {
     int answer = 987654321;
