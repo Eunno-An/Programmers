@@ -138,3 +138,4 @@ https://blog.naver.com/paula23/222167420683
 |자물쇠와 열쇠|[자물쇠와 열쇠 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/60059)|[자물쇠와 열쇠 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/★자물쇠와%20열쇠.cpp)|
 |단어 변환|[단어 변환 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/43163)|[단어 변환 문제 풀이](https://github.com/Eunno-An/Programmers/tree/main/Lv3)|
 |합승 택시 요금|[합승 택시 요금 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/72413#qna)|[합승 택시 요금 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/★★★합승택시요금.cpp)|
+|경주로 건설|[경주로 건설 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/67259#qna)|[경주로 건설 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/★★★경주로%20건설.cpp)|
