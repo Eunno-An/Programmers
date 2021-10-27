@@ -136,6 +136,6 @@ https://blog.naver.com/paula23/222167420683
 |불량 사용자|[불량 사용자 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/64064)|[불량 사용자 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/%E2%98%85%EB%B6%88%EB%9F%89%EC%82%AC%EC%9A%A9%EC%9E%90.cpp)|
 |[1차]셔틀버스|[[1차]셔틀버스 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/17678)|[[1차]셔틀버스 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/★★★%5B1차%5D%20셔틀버스.cpp)|
 |자물쇠와 열쇠|[자물쇠와 열쇠 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/60059)|[자물쇠와 열쇠 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/★자물쇠와%20열쇠.cpp)|
-|단어 변환|[단어 변환 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/43163)|[단어 변환 문제 풀이](https://github.com/Eunno-An/Programmers/tree/main/Lv3)|
+|단어 변환|[단어 변환 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/43163)|[단어 변환 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/★단어%20변환.cpp)|
 |합승 택시 요금|[합승 택시 요금 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/72413#qna)|[합승 택시 요금 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/★★★합승택시요금.cpp)|
 |경주로 건설|[경주로 건설 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/67259#qna)|[경주로 건설 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/★★★경주로%20건설.cpp)|
