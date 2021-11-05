@@ -110,12 +110,10 @@ vector<vector<int>> solution(int n, vector<vector<int>> build_frame) {
 
     while (!temp.empty()) {
         vector<int> structure = temp.front(); temp.pop();
-        answer.push_back(structure);
+        
         int y = structure[0];
         int x = structure[1];
-        int st = structure[2];
-        visit[y][x][st] = true;
-
+        
         int up = matrix[y][x]->u;
         int down = matrix[y][x]->d;
         int left = matrix[y][x]->l;
@@ -124,18 +122,26 @@ vector<vector<int>> solution(int n, vector<vector<int>> build_frame) {
         int nextSt;
         if (up == 1 && visit[y + 1][x][0] == false) {
             nextStructure = { y + 1, x, 0 };
+            visit[y][x][0] = true;
+            answer.push_back(structure);
             temp.push(nextStructure);
         }
         if (down == 1 && visit[y - 1][x][0] == false) {
             nextStructure = { y - 1, x, 0 };
+            visit[y][x][0] = true;
+            answer.push_back(structure);
             temp.push(nextStructure);
         }
         if (left == 1 && visit[y][x - 1][1] == false) {
             nextStructure = { y, x - 1, 1 };
+            visit[y][x][0] = true;
+            answer.push_back(structure);
             temp.push(nextStructure);
         }
         if (right == 1 && visit[y][x + 1][1] == false) {
             nextStructure = { y, x + 1, 1 };
+            visit[y][x][0] = true;
+            answer.push_back(structure);
             temp.push(nextStructure);
         }
     }
