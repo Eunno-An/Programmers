@@ -143,3 +143,4 @@ https://blog.naver.com/paula23/222167420683
 |여행 경로|[여행 경로 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/43164#qna)|[여행 경로 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/여행경로.cpp)|
 |섬 연결하기|[섬 연결하기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42861)|[섬 연결하기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/★섬%20연결하기.cpp)|
 |기둥과 보 설치|[기둥과 보 설치 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/60061)|[기둥과 보 설치 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/★★★★기둥과%20보%20설치.cpp)|
+|길찾기 게임|[길찾기 게임 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42892)|[길찾기 게임 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/★★길%20찾기%20게임.cpp)|
