@@ -1,9 +1,3 @@
-#include <string>
-#include <vector>
-#include <algorithm>
-#include <cstring>
-#include <iostream>
-using namespace std;
 //1. 트리를 완성한다.
 //트리를 어떻게 완성할 것인지? 
 //배열에 좌표 표시? 그럼 10만 * 10만 배열 잡아야 하므로 배열은 안됨.
@@ -15,6 +9,15 @@ using namespace std;
 
 //leftSubtree에서 부모를 찾는다, rightSubtree도 마찬가지이다.
 //2. 전위, 후위 순회를 한다.
+
+
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <cstring>
+#include <iostream>
+using namespace std;
+
 bool compare(vector<int> a, vector<int> b){
     if(a[2] == b[2])
         return a[1] < b[1];
