@@ -18,20 +18,19 @@ int solution(vector<int> stones, int k) {
     int answer = 0;
     
     long long rangeSum = 0;
-    int maxElement = numeric_limits<int>::min();//어떤 구간에서의 최대값.
+    long long minRangeSum = numeric_limits<long long>::max();
+    int maxElement = numeric_limits<int>::min();//window에서의 최대값.
    
     //sliding-window
-    long long previous_rangeSum;
-    int previous_maxElement;
     multiset<int> rangeSet;
     for (int i = 0; i < stones.size(); i++) {
         if (i < k) {
             rangeSum += (long long)stones[i];
             if (maxElement < stones[i])
                 maxElement = stones[i];
-            previous_rangeSum = rangeSum;
-            previous_maxElement = maxElement;
+            
             rangeSet.insert(stones[i]);
+            minRangeSum = rangeSum;
             continue;
         }
         rangeSum += stones[i];
@@ -40,18 +39,18 @@ int solution(vector<int> stones, int k) {
         rangeSet.insert(stones[i]);
         rangeSet.erase(rangeSet.find(stones[i - k]));
         
-        if (rangeSum < previous_rangeSum) {//이 구간안에서는 무조건 최대값이 답임.
-            previous_rangeSum = rangeSum;
-            previous_maxElement = *(--rangeSet.end());
+        
+        if(minRangeSum > rangeSum){//새로운 최소 구간 합 window가 나올 경우
+            minRangeSum = rangeSum;
+            maxElement = *(--rangeSet.end());
         }
-
-        else if (rangeSum == previous_rangeSum) //여기서는 다른 구간의 최대값이랑 비교했을때 작아야함.
-            if (previous_maxElement >*(--rangeSet.end()))
-                previous_maxElement = *(--rangeSet.end());
-
+        else if(minRangeSum == rangeSum)//최소 구간 합은 같은데, 그 구간의 최대값이 더 작은 경우
+            if(*(--rangeSet.end()) < maxElement)
+                maxElement = *(--rangeSet.end());
+        
         
     }
-    return answer = previous_maxElement;
+    return answer = maxElement;
 }
 int main() {
     solution({ 2, 4, 5, 3, 2, 1, 4, 2, 5, 1 }, 3);
