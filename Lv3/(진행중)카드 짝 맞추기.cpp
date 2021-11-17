@@ -1,5 +1,12 @@
+//
 //minMove의 fix_directions수정 요함.
 
+/*
+내가 놓친 부분
+카드 쌍을 지울 때, 어떤 것을 먼저 지울지 결정하는 부분에서
+내가 했던 것은 현재 커서로부터 A1, A2과의 거리만 비교하여 단순 작은것부터 이동했다.
+이러면 안되고, (커서->A1->A2)의 값과 (커서->A2->A1)의 값을 비교하여야 한다.
+*/
 #include <string>
 #include <vector>
 #include <algorithm>
