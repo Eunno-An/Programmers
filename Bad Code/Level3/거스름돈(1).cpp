@@ -8,7 +8,7 @@ const int MOD = 1000000007;
 //완전탐색: 거슬러 줘야 하는 금액 n과 Finn이 현재 보유하고 있는 돈의 종류가 주어질 때, Finn이 n원을 거슬러 줄 방법의 수를 return 하도록 하여라.
 
 int cache[100001][101];
-int bruteForce(int n, vector<int> money, int moneyIdx) {
+int dp(int n, vector<int> money, int moneyIdx) {
     if (n == 0)
         return 1;
     int& ret = cache[n][moneyIdx];
