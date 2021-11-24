@@ -10,6 +10,7 @@ https://blog.naver.com/paula23/222167420683
 왜이렇게 잘 안될까.. 실력이 안느는 기분이다.
 
 11.21 그래도 다시 마음잡고 가자
+가보자
 </p>
 
 [못한 날들에 대한 변명들..?](https://github.com/Eunno-An/Programmers/blob/main/%EB%AA%BB%ED%95%9C%20%EB%82%A0%EB%93%A4...!)
