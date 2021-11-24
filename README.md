@@ -151,3 +151,4 @@ https://blog.naver.com/paula23/222167420683
 |카드 짝 맞추기|[카드 짝 맞추기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/72415)|[카드 짝 맞추기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/★★★★카드%20짝%20맞추기.cpp)|
 |멀리뛰기|[멀리뛰기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12914)|[멀리뛰기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/멀리%20뛰기.cpp)|
 |거스름돈|[거스름돈 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12907#qna)|[거스름돈 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/★★★거스름돈.cpp)|
+|스티커 모으기|[스티커 모으기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12971#)|[스티커 모으기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/★★★스티커%20모으기(2).cpp)|
