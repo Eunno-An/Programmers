@@ -155,3 +155,4 @@ https://blog.naver.com/paula23/222167420683
 |멀리뛰기|[멀리뛰기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12914)|[멀리뛰기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/멀리%20뛰기.cpp)|
 |거스름돈|[거스름돈 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12907#qna)|[거스름돈 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/★★★거스름돈.cpp)|
 |스티커 모으기|[스티커 모으기 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12971#)|[스티커 모으기 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/★★★스티커%20모으기(2).cpp)|
+|기지국 설치|[기지국 설치 문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12979)|[기지국 설치 문제 풀이](https://github.com/Eunno-An/Programmers/blob/main/Lv3/★★기지국%20설치.cpp)|
