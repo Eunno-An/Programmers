@@ -13,6 +13,7 @@ https://blog.naver.com/paula23/222167420683
 
 
 지치면 지는거고 미치면 이기는거다
+정신전력: https://gall.dcinside.com/board/view/?id=programming&no=1358794
 
 </p>
 
