@@ -14,7 +14,7 @@ https://blog.naver.com/paula23/222167420683
 
 지치면 지는거고 미치면 이기는거다
 정신전력: https://gall.dcinside.com/board/view/?id=programming&no=1358794
-
+릿코드 공부 시작 12/2
 </p>
 
 [못한 날들에 대한 변명들..?](https://github.com/Eunno-An/Programmers/blob/main/%EB%AA%BB%ED%95%9C%20%EB%82%A0%EB%93%A4...!)
